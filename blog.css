@@ -1,17 +1,23 @@
-/* blog.css */
 
-/* ── HERO ── */
+/* ─────────────────────────────
+   HERO SECTION
+──────────────────────────── */
 .blog-hero {
   background: var(--green);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 44px 52px;
-  min-height: 200px;
+  min-height: 220px;
   position: relative;
   overflow: hidden;
 }
-.blog-hero-text { z-index: 2; position: relative; }
+
+.blog-hero-text {
+  z-index: 2;
+  position: relative;
+}
+
 .blog-hero-text h1 {
   font-family: 'Fredoka One', cursive;
   font-size: 2.1rem;
@@ -19,6 +25,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
 }
+
 .blog-hero-illustration {
   position: absolute;
   right: 52px;
@@ -26,51 +33,110 @@
   transform: translateY(-50%);
   width: 280px;
 }
-.blog-hero-illustration svg { width: 100%; height: auto; }
 
-/* ── BLOG CARDS ── */
+.blog-hero-illustration svg {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ─────────────────────────────
+   BLOG GRID
+──────────────────────────── */
 .blog-cards-section {
-  padding: 48px 52px;
+  padding: 60px 52px;
   background: #fff;
 }
+
 .blog-cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+
+/* ─────────────────────────────
+   BLOG CARD BASE
+──────────────────────────── */
 .blog-card {
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
 }
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* COLOR THEMES */
 .blog-card-blue   { background: var(--blue); }
 .blog-card-green  { background: var(--green); }
 .blog-card-yellow { background: var(--yellow); }
 .blog-card-red    { background: var(--red); }
 
+
+/* ─────────────────────────────
+   IMAGE / PLACEHOLDER BOX
+──────────────────────────── */
 .bc-img {
   width: 100%;
   aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
-.bc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* REAL IMAGES (if used later) */
+.bc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* COMING SOON PLACEHOLDER */
+.bc-img.coming-soon {
+  background: #ffffff;
+  color: #000;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  border: 2px dashed rgba(0,0,0,0.25);
+}
+
+
+/* ─────────────────────────────
+   CARD CONTENT
+──────────────────────────── */
 .bc-body {
   padding: 14px 18px 16px;
 }
+
 .bc-body h3 {
   font-family: 'Fredoka One', cursive;
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 6px;
 }
-.blog-card-yellow .bc-body h3 { color: #222; }
 
+/* FIX: yellow card dark text */
+.blog-card-yellow .bc-body h3 {
+  color: #222;
+}
+
+
+/* ─────────────────────────────
+   META (DATE + LINK)
+──────────────────────────── */
 .bc-meta {
   display: flex;
   justify-content: space-between;
@@ -78,7 +144,19 @@
   font-size: 0.82rem;
   font-weight: 700;
 }
-.bc-meta span { color: rgba(255,255,255,0.9); }
-.bc-meta a    { color: rgba(255,255,255,0.9); font-weight: 800; }
+
+.bc-meta span {
+  color: rgba(255,255,255,0.9);
+}
+
+.bc-meta a {
+  color: rgba(255,255,255,0.9);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* FIX: yellow card text */
 .blog-card-yellow .bc-meta span,
-.blog-card-yellow .bc-meta a { color: #222; }
+.blog-card-yellow .bc-meta a {
+  color: #222;
+}
