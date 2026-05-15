@@ -288,3 +288,70 @@
   transition: opacity 0.2s;
 }
 .btn-submit-orange:hover { opacity: 0.85; }
+
+
+
+
+footer
+footer
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+/* BASE BUTTON */
+.social-circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.25s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* ICON SIZE */
+.social-circle img {
+  width: 60%;
+  height: 60%;
+  filter: brightness(0) invert(1); /* makes SVG icons white */
+}
+
+/* FACEBOOK */
+.social-circle[href*="facebook"] {
+  background: #1877F2;
+}
+
+/* INSTAGRAM */
+.social-circle[href*="instagram"] {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* LINKEDIN */
+.social-circle[href*="linkedin"] {
+  background: #0A66C2;
+}
+
+/* STEM LOGO */
+.logo-btn {
+  background: #111;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* HOVER EFFECT */
+.social-circle:hover {
+  transform: translateY(-3px) scale(1.08);
+  opacity: 0.9;
+}
+
+
+
+
