@@ -369,61 +369,36 @@ footer
   margin-bottom: 12px;
 }
 
-/* BASE BUTTON STYLE */
+/* BUTTON BASE */
 .social-circle {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 18px;
-  transition: all 0.25s ease;
+  background: white;
+  border: 2px solid rgba(255,255,255,0.7);
+  overflow: hidden;
+  transition: 0.25s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  background: transparent;
-  border: 2px solid white;
 }
 
-/* ICON COLOR = WHITE OUTLINE LOOK */
-.social-circle i {
-  color: white;
+/* IMAGE INSIDE BUTTON */
+.social-circle img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
-/* STEM LOGO */
+/* STEM LOGO (dark background) */
 .logo-btn {
-  border: 2px solid white;
   background: #111;
-}
-
-/* FACEBOOK */
-.social-fb {
-  background: #1877F2;
-}
-
-/* INSTAGRAM */
-.social-ig {
-  background: radial-gradient(circle at 30% 107%,
-    #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-/* LINKEDIN */
-.social-li {
-  background: #0A66C2;
 }
 
 /* HOVER EFFECT */
 .social-circle:hover {
   transform: translateY(-3px) scale(1.08);
-  opacity: 0.95;
+  opacity: 0.9;
 }
-
-
-
-
-
-
-
-
-
-
