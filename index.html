@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The STEM Club — Home</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="https://i.imgur.com/placeholder.png" alt="The STEM Club"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+           style="height:64px;width:auto;"/>
+      <div class="logo-text-fallback" style="display:flex;flex-direction:column;line-height:1;">
+        <span style="font-family:'Fredoka One',cursive;font-size:1.6rem;color:#E8312A;">THE</span>
+        <span style="font-family:'Fredoka One',cursive;font-size:2rem;color:#E8312A;">STEM</span>
+        <span style="font-family:'Fredoka One',cursive;font-size:1rem;color:#222;">CLUB</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#workshops">Workshops</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="support.html">Support Us</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#" class="btn-donate">DONATE</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO — split red left / blue right -->
+  <section class="home-hero">
+    <div class="home-hero-left">
+      <p class="change-world-tag">🔗 Change The World.</p>
+      <h1>Need Your Big<br/>Hand For Change<br/>The World</h1>
+      <div class="hero-btns">
+        <a href="#workshops" class="btn-pill-yellow">Workshops</a>
+        <a href="#" class="btn-pill-green">Donate</a>
+      </div>
+    </div>
+    <div class="home-hero-right">
+      <div class="hero-video-thumb">
+        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=500&q=80" alt="STEM Workshop"/>
+        <div class="play-btn">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.25)"/><polygon points="24,18 46,30 24,42" fill="#fff"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES cards -->
+  <section class="mvv-section">
+    <div class="mvv-grid">
+      <!-- Mission — blue -->
+      <div class="mvv-card mvv-blue">
+        <div class="mvv-icon">🎯</div>
+        <h3>Mission</h3>
+        <p>Our Mision is to blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+        <button class="btn-mvv-white">View Details</button>
+      </div>
+      <!-- Vision — green -->
+      <div class="mvv-card mvv-green">
+        <div class="mvv-icon">👥</div>
+        <h3>Vision</h3>
+        <p>Our Mision is to blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+        <button class="btn-mvv-white">View Details</button>
+      </div>
+      <!-- Values — yellow -->
+      <div class="mvv-card mvv-yellow">
+        <div class="mvv-icon">🤝</div>
+        <h3>Values</h3>
+        <p>Our Mision is to blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+        <button class="btn-mvv-white">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <p class="about-eyebrow">— About Us.</p>
+        <h2 class="about-title">The <span class="stem-colored">STEM</span> Club is a Non Profitable Organization</h2>
+        <div class="about-photos">
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&q=80" alt="STEM 1" class="about-photo border-red"/>
+          <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=300&q=80" alt="STEM 2" class="about-photo border-green"/>
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=300&q=80" alt="STEM 3" class="about-photo border-blue"/>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&q=80" alt="STEM 4" class="about-photo border-yellow"/>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-bold-quote">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry standard.</p>
+        <p class="about-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry arem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+        <p class="about-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry arem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+        <div class="about-checks">
+          <span>✔️ Change The World.</span>
+          <span class="sep">|</span>
+          <span>✔️ Change The World.</span>
+        </div>
+        <button class="btn-donate-red">DONATE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section class="workshops-section" id="workshops">
+    <div class="workshops-title-deco">
+      <div class="dash red-dash"></div>
+      <h2>Workshops 🔩</h2>
+      <div class="dash red-dash"></div>
+    </div>
+    <div class="workshops-inner">
+      <!-- Left: workshop cards -->
+      <div class="workshop-cards">
+        <!-- Mechanical -->
+        <div class="workshop-row ws-red">
+          <div class="ws-img">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&q=80" alt="Mechanical"/>
+          </div>
+          <div class="ws-body">
+            <h3>Mechanical</h3>
+            <p>Our Mision is to blah blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+          </div>
+        </div>
+        <!-- Electrical -->
+        <div class="workshop-row ws-yellow">
+          <div class="ws-body ws-body-left">
+            <h3>Electrical</h3>
+            <p>Our Mision is to blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+          </div>
+          <div class="ws-img">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80" alt="Electrical"/>
+          </div>
+        </div>
+        <!-- Computer -->
+        <div class="workshop-row ws-blue">
+          <div class="ws-img">
+            <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=200&q=80" alt="Computer"/>
+          </div>
+          <div class="ws-body">
+            <h3>Computer</h3>
+            <p>Our Mision is to blah blah blah somethign is cool beacuse its awesome and life is just great and good.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Urgent Causes -->
+      <div class="urgent-causes">
+        <h4 class="urgent-title">Urgent Causes</h4>
+        <div class="urgent-divider"></div>
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=260&q=80" alt="Uganda children" class="urgent-img"/>
+        <p class="urgent-caption">Need School For<br/>Uganda Poor Children.</p>
+        <div class="urgent-goal-row">
+          <span>Goal</span>
+          <span>Raised</span>
+        </div>
+        <div class="urgent-amounts">
+          <span>$7,000</span>
+          <span>$7,000</span>
+        </div>
+        <div class="donation-amounts">
+          <span>$10</span><span>$35</span><span>$50</span><span>$99</span>
+        </div>
+        <input type="text" placeholder="Custom Amount" class="custom-amount"/>
+        <button class="btn-donate-orange">Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT OUR WORK BANNER -->
+  <section class="support-work-banner">
+    <div class="heart-icon">
+      <!-- layered heart SVG matching design -->
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 35 Q15 15 35 15 Q50 15 50 30 Q50 15 65 15 Q85 15 85 35 Q85 55 50 80 Q15 55 15 35Z" fill="#29ABE2" transform="rotate(-10 50 50)"/>
+        <path d="M18 38 Q18 18 38 18 Q50 18 50 32 Q50 18 62 18 Q82 18 82 38 Q82 56 50 78 Q18 56 18 38Z" fill="#E8312A" transform="rotate(5 50 50)"/>
+        <path d="M20 40 Q20 20 40 20 Q50 20 50 33 Q50 20 60 20 Q80 20 80 40 Q80 57 50 76 Q20 57 20 40Z" fill="#F5C518" transform="translate(0 8)"/>
+      </svg>
+    </div>
+    <div class="sw-text">
+      <h2>Support Our Work</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="sw-btns">
+      <a href="support.html" class="btn-green-pill">Our Shop -></a>
+      <a href="support.html" class="btn-red-pill">Support Our Campaign</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-title-deco">
+      <div class="dash"></div>
+      <h2>Contact</h2>
+      <div class="dash"></div>
+    </div>
+    <div class="contact-form-card">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" placeholder="Jane"/>
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label>
+          <input type="text" placeholder="Smith"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" placeholder="jane@example.com"/>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us about your interest..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="event.preventDefault()">Submit</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-socials">
+      <div class="social-circle social-tg">✈</div>
+      <div class="social-circle social-tm">t</div>
+      <div class="social-circle social-dc">💬</div>
+    </div>
+    <p class="footer-legal">
+      <a href="#">Privacy Policy</a> &nbsp;<a href="#">Legal</a> &nbsp;© 2025 The STEM Club. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
