@@ -1,0 +1,143 @@
+/* ─────────────────────────────
+   INDIVIDUAL BLOG POST PAGE
+──────────────────────────── */
+.blog-post-hero {
+  padding: 64px 52px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-post-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 280px;
+  height: 280px;
+  border: 28px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+
+.blog-post-hero-blue { background: var(--blue); }
+.blog-post-hero-green { background: var(--green); }
+.blog-post-hero-yellow { background: var(--yellow); color: #222; }
+.blog-post-hero-red { background: var(--red); }
+
+.blog-post-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.blog-post-hero h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.blog-post-meta {
+  font-weight: 900;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.blog-post-summary {
+  max-width: 720px;
+  font-size: 1.16rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.blog-post-wrap {
+  background: #fff;
+  padding: 56px 24px 72px;
+}
+
+.blog-post-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.blog-post-content p,
+.blog-post-content li {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #333;
+}
+
+.blog-post-content p + p,
+.blog-post-content ul + p,
+.blog-post-content p + ul {
+  margin-top: 18px;
+}
+
+.blog-post-content h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.65rem;
+  margin: 34px 0 12px;
+  color: var(--dark-blue);
+}
+
+.blog-post-content ul {
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.blog-post-content li + li {
+  margin-top: 10px;
+}
+
+.blog-post-actions {
+  max-width: 820px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.blog-post-action {
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 900;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.blog-post-action-primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.blog-post-action-secondary {
+  background: var(--yellow);
+  color: #222;
+}
+
+@media (max-width: 700px) {
+  .blog-post-hero {
+    padding: 44px 24px;
+  }
+
+  .blog-post-wrap {
+    padding: 34px 16px 52px;
+  }
+
+  .blog-post-content {
+    padding: 24px;
+  }
+}
