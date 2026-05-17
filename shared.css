@@ -5,7 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-scroll-offset, 176px);
+}
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #17324d;
@@ -32,7 +35,10 @@ ul { list-style: none; }
   --white: #fff;
   --black: #111;
   --shadow: 0 20px 45px rgba(23, 50, 77, 0.12);
+  --nav-scroll-offset: 176px;
 }
+
+[id] { scroll-margin-top: var(--nav-scroll-offset, 176px); }
 
 /* ── NAVBAR ── */
 .navbar {
@@ -45,6 +51,22 @@ ul { list-style: none; }
   top: 0;
   z-index: 999;
   backdrop-filter: blur(12px);
+  box-shadow: none;
+  transform: translateY(0);
+  transition: padding 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.navbar.navbar--compact {
+  padding: 8px 52px;
+  border-bottom-color: rgba(41,171,226,0.26);
+  box-shadow: 0 10px 30px rgba(23,50,77,0.12);
+}
+.navbar.navbar--retracted {
+  transform: translateY(calc(-100% + 14px));
+  box-shadow: 0 14px 30px rgba(23,50,77,0.1);
+}
+.navbar.navbar--retracted:hover,
+.navbar.navbar--retracted:focus-within {
+  transform: translateY(0);
 }
 .navbar .logo {
   display: inline-flex;
@@ -54,6 +76,10 @@ ul { list-style: none; }
 .navbar .logo img {
   height: 112px;
   width: auto;
+  transition: height 0.28s ease;
+}
+.navbar.navbar--compact .logo img {
+  height: 67px;
 }
 .nav-links {
   display: flex;
@@ -63,6 +89,11 @@ ul { list-style: none; }
   font-size: 1.22rem;
   font-weight: 900;
   color: var(--ink);
+  transition: gap 0.28s ease, font-size 0.28s ease;
+}
+.navbar.navbar--compact .nav-links {
+  gap: 24px;
+  font-size: 0.86rem;
 }
 .nav-links a:not(.btn-donate) {
   --underline-color: var(--red);
@@ -70,7 +101,10 @@ ul { list-style: none; }
   display: inline-block;
   padding-bottom: 7px;
   color: var(--ink);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, padding-bottom 0.28s ease;
+}
+.navbar.navbar--compact .nav-links a:not(.btn-donate) {
+  padding-bottom: 4px;
 }
 .nav-links a:not(.btn-donate)::after {
   content: "";
@@ -107,7 +141,11 @@ ul { list-style: none; }
   letter-spacing: 0.04em;
   margin-left: 8px;
   box-shadow: 0 12px 24px rgba(232,49,42,0.24);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.28s ease, font-size 0.28s ease;
+}
+.navbar.navbar--compact .btn-donate {
+  padding: 10px 20px;
+  font-size: 0.82rem;
 }
 .btn-donate:hover { transform: translateY(-2px); box-shadow: 0 16px 28px rgba(232,49,42,0.3); }
 
@@ -308,12 +346,17 @@ ul { list-style: none; }
 
 @media (max-width: 980px) {
   .navbar { padding: 14px 22px; align-items: flex-start; }
+  .navbar.navbar--compact { padding: 8px 22px; }
   .navbar .logo img { height: 86px; }
+  .navbar.navbar--compact .logo img { height: 52px; }
   .nav-links { gap: 18px; font-size: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .navbar.navbar--compact .nav-links { gap: 12px; font-size: 0.82rem; }
   .btn-donate { padding: 12px 22px; font-size: 1rem; }
+  .navbar.navbar--compact .btn-donate { padding: 8px 16px; font-size: 0.8rem; }
 }
 @media (max-width: 700px) {
   .navbar { flex-direction: column; align-items: center; gap: 12px; }
+  .navbar.navbar--compact { gap: 8px; }
   .nav-links { margin-left: 0; justify-content: center; gap: 14px; }
   .contact-form-card .form-row { grid-template-columns: 1fr; }
   .support-work-banner .sw-btns { flex-direction: column; width: min(100%, 320px); }
