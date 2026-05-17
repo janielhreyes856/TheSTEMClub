@@ -3,23 +3,24 @@
 /* ── HERO ── */
 .home-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 260px;
+  grid-template-columns: minmax(320px, 0.9fr) 1.1fr;
+  min-height: 430px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.42) 42%, rgba(0,0,0,0.06) 100%),
+    url("A.png") center / cover no-repeat;
 }
 .home-hero-left {
-  background: var(--red);
   padding: 44px 40px 44px 52px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
 }
 .home-hero-right {
-  background: var(--blue);
   padding: 32px 40px 32px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.home-hero .hero-video-thumb {
+  display: none;
 }
 .change-world-tag {
   font-size: 0.85rem;
