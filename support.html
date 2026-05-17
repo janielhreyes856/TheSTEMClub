@@ -19,7 +19,7 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="support.html" class="active">Support Us</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="support.html#donate" class="btn-donate">DONATE</a></li>
+      <li><a href="support.html#payment" class="btn-donate">DONATE</a></li>
     </ul>
   </nav>
 
@@ -29,7 +29,7 @@
       <h1>Fuel student builders, coders, and problem solvers.</h1>
       <p>Choose the giving path that fits you best: donate to the robotics campaign, purchase club merch, share supplies, volunteer, or become a community partner.</p>
       <div class="hero-btns">
-        <a href="#donate" class="btn-pill-red">Donate</a>
+        <a href="#payment" class="btn-pill-red">Donate</a>
         <a href="#shop" class="btn-pill-outline">Shop & Cart</a>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics equipment for a student campaign"/>
         <h3>Our Campaign</h3>
         <p>Support our robotics campaign so more students can build, code, test, and showcase real working robots.</p>
-        <a href="#donate" class="sc-btn sc-btn-green">Campaign</a>
+        <a href="#payment" class="sc-btn sc-btn-green">Campaign</a>
       </article>
 
       <article class="support-card sc-green">
@@ -99,42 +99,28 @@
         </article>
       </div>
 
-      <aside class="cart-panel" aria-live="polite">
-        <h3>Your Cart</h3>
-        <div class="cart-items" data-cart-items><p class="empty-cart">No items yet. Click Add to begin.</p></div>
-        <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
-        <a href="#donate" class="checkout-btn">Checkout</a>
-      </aside>
     </div>
   </section>
 
-  <section class="donation-checkout" id="donate">
+  <section class="payment-page" id="payment">
     <div class="payment-card">
-      <p class="section-kicker">PayPal ready</p>
-      <h2>Donate or checkout securely</h2>
-      <p>Add your PayPal business email or PayPal button link when you are ready. This form is structured so the checkout experience has a clear place on the website.</p>
+      <p class="section-kicker">Secure checkout</p>
+      <h2>Checkout with PayPal</h2>
+      <p>Review your cart amount, choose the purpose, and continue to PayPal to complete your support securely.</p>
       <form class="payment-form" action="https://www.paypal.com/donate" method="post">
         <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com"/>
         <label>Donation / cart amount</label>
         <input type="number" name="amount" min="1" step="1" placeholder="25" data-payment-amount/>
         <label>Purpose</label>
         <select name="item_name">
-          <option>Robotics campaign</option>
-          <option>Workshop supplies</option>
           <option>Shop checkout</option>
+          <option>Workshop supplies</option>
+          <option>Robotics campaign</option>
           <option>General support</option>
         </select>
         <button type="submit" class="paypal-btn">Continue to PayPal</button>
       </form>
     </div>
-
-    <aside class="campaign-card">
-      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics campaign"/>
-      <h3>Robotics Campaign</h3>
-      <p>Help us purchase reusable robotics kits, sensors, batteries, safety supplies, and tournament-style challenge materials.</p>
-      <div class="progress"><span style="width:35%"></span></div>
-      <div class="campaign-stats"><strong>$2,450 raised</strong><strong>$7,000 goal</strong></div>
-    </aside>
   </section>
 
   <section class="volunteer-section" id="volunteer">
@@ -169,6 +155,20 @@
     </div>
     <p class="footer-legal"><a href="#">Privacy Policy</a> &nbsp; <a href="#">Legal</a> &nbsp; © 2025 The STEM Club. All rights reserved.</p>
   </footer>
+
+
+  <aside class="floating-cart" data-floating-cart aria-live="polite">
+    <button class="floating-cart-toggle" type="button" data-cart-toggle aria-label="Open cart">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count" data-cart-count>0</span>
+    </button>
+    <div class="floating-cart-panel">
+      <h3>Cart</h3>
+      <div class="cart-items" data-cart-items><p class="empty-cart">No items yet.</p></div>
+      <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
+      <a href="#payment" class="checkout-btn">Checkout</a>
+    </div>
+  </aside>
 
   <script src="main.js"></script>
 </body>

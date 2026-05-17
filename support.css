@@ -10,72 +10,76 @@
 }
 .support-hero .section-kicker { color: #fff; margin-bottom: 16px; }
 .support-hero-text { max-width: 840px; }
-.support-hero-text h1 { font-family: 'Fredoka', cursive; font-size: clamp(3rem, 6vw, 6rem); line-height: 1; letter-spacing: -0.05em; margin-bottom: 20px; }
+.support-hero-text h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(3rem, 6vw, 6rem); line-height: 1; letter-spacing: -0.05em; margin-bottom: 20px; }
 .support-hero-text p:not(.section-kicker) { font-size: 1.2rem; line-height: 1.7; font-weight: 800; max-width: 760px; margin-bottom: 28px; }
 
 .contributions-section { padding: 84px 40px; background: linear-gradient(180deg, #fff, var(--sky-soft)); text-align: center; }
-.contributions-section h2 { font-family: 'Fredoka', cursive; font-size: clamp(2.1rem, 4vw, 3.6rem); color: var(--ink); max-width: 880px; margin: 16px auto; }
-.contrib-sub { max-width: 760px; margin: 0 auto 42px; font-size: 1.08rem; line-height: 1.7; color: var(--muted); font-weight: 700; }
+.contributions-section h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.2rem, 4.5vw, 4.2rem); color: var(--ink); line-height: 1.05; max-width: 900px; margin: 12px auto 16px; letter-spacing: -0.04em; }
+.contrib-sub { max-width: 760px; margin: 0 auto 40px; color: var(--muted); font-weight: 700; line-height: 1.7; }
 .support-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; max-width: 1240px; margin: 0 auto; }
-.support-card { background: #fff; border-radius: 28px; overflow: hidden; padding: 0 0 24px; text-align: left; box-shadow: var(--shadow); display: flex; flex-direction: column; min-height: 430px; }
-.support-card img { width: 100%; aspect-ratio: 16/11; object-fit: cover; }
-.support-card h3 { font-family: 'Fredoka', cursive; font-size: 1.45rem; color: var(--ink); padding: 22px 22px 0; }
+.support-card { background: #fff; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; text-align: left; border: 1px solid rgba(13,79,128,0.1); }
+.support-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.support-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.45rem; color: var(--ink); padding: 22px 22px 0; }
 .support-card p { font-size: 0.98rem; font-weight: 700; line-height: 1.6; color: var(--muted); padding: 0 22px; margin-top: 10px; flex: 1; }
 .sc-yellow { border-bottom: 9px solid var(--yellow); }
-.sc-red { border-bottom: 9px solid var(--red); }
-.sc-green { border-bottom: 9px solid var(--green); }
+.sc-red { border-bottom: 9px solid var(--green); }
+.sc-green { border-bottom: 9px solid var(--blue); }
 .sc-blue { border-bottom: 9px solid var(--blue); }
-.sc-btn { align-self: flex-start; margin: 18px 22px 0; border: none; border-radius: 999px; padding: 10px 22px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.92rem; cursor: pointer; color: #fff; }
+.sc-btn { align-self: flex-start; margin: 18px 22px 22px; border: none; border-radius: 999px; padding: 10px 22px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 0.92rem; cursor: pointer; color: #fff; }
 .sc-btn-red { background: var(--red); } .sc-btn-green { background: var(--green); } .sc-btn-blue { background: var(--blue); } .sc-btn-yellow { background: var(--yellow); color: #222; }
 
 .our-shop-section { background: #102f4a; padding: 80px 40px; color: #fff; }
 .shop-title-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 12px; }
-.shop-title-row h2 { font-family: 'Fredoka', cursive; font-size: clamp(2.2rem, 4vw, 3.5rem); }
+.shop-title-row h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.2rem, 4vw, 3.5rem); }
 .shop-dash { font-size: 2rem; font-weight: 900; color: var(--yellow); }
 .shop-intro { max-width: 760px; text-align: center; margin: 0 auto 38px; color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.6; font-weight: 700; }
-.shop-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 26px; max-width: 1260px; margin: 0 auto; align-items: start; }
+.shop-layout { max-width: 1260px; margin: 0 auto; }
 .shop-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .shop-card { background: #fff; color: var(--ink); border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 16px 34px rgba(0,0,0,0.22); }
 .shop-img { aspect-ratio: 1; overflow: hidden; background: #fff; }
 .shop-img img { width: 100%; height: 100%; object-fit: cover; }
 .shop-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-.shop-body h4 { font-family: 'Fredoka', cursive; font-size: 1.2rem; }
+.shop-body h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; }
 .shop-body p { color: var(--muted); font-weight: 700; line-height: 1.45; flex: 1; }
-.shop-body strong { font-size: 1.18rem; color: var(--red); }
-.shop-btn, .checkout-btn, .paypal-btn { border: none; border-radius: 999px; padding: 11px 18px; font-family: 'Nunito', sans-serif; font-weight: 900; cursor: pointer; text-align: center; }
+.shop-body strong { font-size: 1.18rem; color: var(--blue); }
+.shop-btn, .checkout-btn, .paypal-btn { border: none; border-radius: 999px; padding: 11px 18px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; cursor: pointer; text-align: center; }
 .shop-btn { background: var(--yellow); color: #222; }
-.cart-panel { background: #fff; color: var(--ink); border-radius: 26px; padding: 24px; box-shadow: 0 16px 34px rgba(0,0,0,0.22); position: sticky; top: 170px; }
-.cart-panel h3 { font-family: 'Fredoka', cursive; font-size: 1.5rem; margin-bottom: 14px; }
-.cart-items { display: flex; flex-direction: column; gap: 10px; min-height: 90px; }
-.cart-line { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid #e3edf4; font-weight: 800; }
+
+.floating-cart { position: fixed; top: 132px; right: 24px; z-index: 1000; display: none; }
+.floating-cart.is-visible { display: block; }
+.floating-cart-toggle { margin-left: auto; display: flex; align-items: center; gap: 8px; border: none; border-radius: 999px; background: var(--dark-blue); color: #fff; padding: 12px 16px; box-shadow: var(--shadow); cursor: pointer; font-weight: 900; }
+.cart-icon { font-size: 1.3rem; }
+.cart-count { min-width: 24px; height: 24px; border-radius: 999px; display: grid; place-items: center; background: var(--yellow); color: #222; }
+.floating-cart-panel { width: 330px; margin-top: 12px; margin-left: auto; background: #fff; color: var(--ink); border-radius: 26px; padding: 22px; box-shadow: 0 18px 45px rgba(13,79,128,0.22); border: 1px solid rgba(41,171,226,0.18); }
+.floating-cart:not(.is-open) .floating-cart-panel { display: none; }
+.floating-cart-panel h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.35rem; margin-bottom: 14px; }
+.cart-items { display: flex; flex-direction: column; gap: 12px; max-height: 300px; overflow: auto; }
+.cart-line { display: grid; grid-template-columns: 54px 1fr auto; gap: 10px; align-items: center; padding-bottom: 12px; border-bottom: 1px solid #e3edf4; font-weight: 800; }
+.cart-line img { width: 54px; height: 54px; border-radius: 14px; object-fit: cover; }
+.cart-line span { display: block; font-size: 0.92rem; }
 .empty-cart { color: var(--muted); font-weight: 700; }
 .cart-total { display: flex; justify-content: space-between; margin: 18px 0; font-size: 1.2rem; }
 .checkout-btn { display: block; background: var(--green); color: #fff; }
 
-.donation-checkout { padding: 86px 40px; background: linear-gradient(135deg, var(--cream), #fff); display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 34px; max-width: 1240px; margin: 0 auto; }
-.payment-card, .campaign-card { background: #fff; border-radius: 30px; box-shadow: var(--shadow); padding: 32px; }
-.payment-card h2 { font-family: 'Fredoka', cursive; font-size: clamp(2rem, 4vw, 3.2rem); color: var(--ink); margin: 14px 0; }
-.payment-card p, .campaign-card p { color: var(--muted); font-weight: 700; line-height: 1.7; margin-bottom: 20px; }
-.payment-form { display: flex; flex-direction: column; gap: 10px; }
+.payment-page { padding: 86px 40px; background: linear-gradient(180deg, var(--sky-soft), #fff); }
+.payment-card { background: #fff; border-radius: 32px; box-shadow: 0 24px 60px rgba(13,79,128,0.16); padding: 36px; max-width: 760px; margin: 0 auto; border: 1px solid rgba(41,171,226,0.18); }
+.payment-card h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); color: var(--ink); margin: 14px 0; letter-spacing: -0.04em; }
+.payment-card p { color: var(--muted); font-weight: 700; line-height: 1.7; margin-bottom: 20px; }
+.payment-form { display: flex; flex-direction: column; gap: 12px; }
 .payment-form label { font-weight: 900; color: var(--ink); }
 .paypal-btn { background: #ffc439; color: #17324d; font-size: 1rem; margin-top: 8px; }
-.campaign-card img { border-radius: 24px; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 18px; }
-.campaign-card h3 { font-family: 'Fredoka', cursive; font-size: 1.6rem; color: var(--ink); margin-bottom: 8px; }
-.progress { height: 13px; border-radius: 999px; background: #e6eff5; overflow: hidden; margin-bottom: 12px; }
-.progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--green), var(--blue)); }
-.campaign-stats { display: flex; justify-content: space-between; gap: 12px; color: var(--ink); }
 
 .volunteer-section { padding: 86px 40px; background: #fff; max-width: 900px; margin: 0 auto; }
-.volunteer-title-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
-.volunteer-title-row h3 { font-family: 'Fredoka', cursive; font-size: 1.5rem; color: var(--ink); }
-.dash-red { flex: 1; height: 4px; background: linear-gradient(90deg, var(--red), var(--yellow)); border-radius: 99px; }
-.volunteer-heading { font-family: 'Fredoka', cursive; font-size: clamp(2rem, 4vw, 3.4rem); color: var(--ink); line-height: 1.08; margin-bottom: 18px; }
+.volunteer-title-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; }
+.volunteer-title-row h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; color: var(--ink); }
+.dash-red { flex: 0 0 72px; height: 4px; background: var(--blue); border-radius: 99px; }
+.volunteer-heading { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 4vw, 3.4rem); color: var(--ink); line-height: 1.08; margin-bottom: 18px; letter-spacing: -0.04em; }
 .volunteer-body { font-size: 1.05rem; color: var(--muted); line-height: 1.7; font-weight: 700; margin-bottom: 30px; }
 .volunteer-form { display: flex; flex-direction: column; gap: 12px; }
 .vf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .volunteer-form textarea { min-height: 150px; resize: vertical; }
 .vf-submit-row { display: flex; justify-content: flex-end; margin-top: 8px; }
-.btn-submit-orange { background: var(--yellow); color: #222; border: none; border-radius: 999px; padding: 13px 38px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1rem; cursor: pointer; }
+.btn-submit-orange { background: var(--blue); color: #fff; border: none; border-radius: 999px; padding: 13px 38px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 1rem; cursor: pointer; }
 
-@media (max-width: 1100px) { .support-cards-grid, .shop-cards-grid { grid-template-columns: repeat(2, 1fr); } .shop-layout, .donation-checkout { grid-template-columns: 1fr; } .cart-panel { position: static; } }
-@media (max-width: 700px) { .support-hero, .contributions-section, .our-shop-section, .donation-checkout, .volunteer-section { padding-left: 22px; padding-right: 22px; } .support-cards-grid, .shop-cards-grid, .vf-row { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .support-cards-grid, .shop-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .support-hero, .contributions-section, .our-shop-section, .payment-page, .volunteer-section { padding-left: 22px; padding-right: 22px; } .support-cards-grid, .shop-cards-grid, .vf-row { grid-template-columns: 1fr; } .floating-cart { top: auto; right: 16px; bottom: 16px; } .floating-cart-panel { width: min(calc(100vw - 32px), 330px); } }

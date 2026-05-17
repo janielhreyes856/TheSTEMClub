@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 .blog-hero-text { z-index: 2; position: relative; max-width: 720px; }
-.blog-hero-text h1 { font-family: 'Fredoka', cursive; font-size: clamp(3rem, 6vw, 5.6rem); color: #fff; line-height: 1; letter-spacing: -0.05em; margin-bottom: 26px; }
+.blog-hero-text h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(3rem, 6vw, 5.6rem); color: #fff; line-height: 1; letter-spacing: -0.05em; margin-bottom: 26px; }
 .blog-hero-illustration { position: absolute; right: 52px; top: 50%; transform: translateY(-50%); width: 340px; }
 .blog-hero-illustration svg { width: 100%; height: auto; }
 .blog-cards-section { padding: 84px 52px; background: linear-gradient(180deg, #fff, var(--sky-soft)); }
@@ -23,7 +23,7 @@
 .bc-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
 .blog-card:hover .bc-img img { transform: scale(1.04); }
 .bc-body { padding: 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
-.bc-body h3 { font-family: 'Fredoka', cursive; font-size: 1.35rem; color: var(--ink); line-height: 1.2; }
+.bc-body h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.35rem; color: var(--ink); line-height: 1.2; }
 .bc-meta { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 0.9rem; font-weight: 900; margin-top: auto; }
 .bc-meta span { color: var(--muted); }
 .bc-meta a { color: var(--dark-blue); font-weight: 900; }
