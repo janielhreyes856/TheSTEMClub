@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="support.css"/>
 </head>
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="logo" aria-label="The STEM Club home">
       <img src="/m.png" alt="The STEM Club"/>
@@ -21,206 +19,157 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="support.html" class="active">Support Us</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="#" class="btn-donate">DONATE</a></li>
+      <li><a href="support.html#donate" class="btn-donate">DONATE</a></li>
     </ul>
   </nav>
 
-  <!-- HERO — blue background with handshake illustration -->
   <section class="support-hero">
     <div class="support-hero-text">
-      <h1>Welcome to<br/>Ways To Support<br/>The STEM Club</h1>
+      <p class="section-kicker">Ways to give</p>
+      <h1>Fuel student builders, coders, and problem solvers.</h1>
+      <p>Choose the giving path that fits you best: donate to the robotics campaign, purchase club merch, share supplies, volunteer, or become a community partner.</p>
       <div class="hero-btns">
-        <a href="index.html#workshops" class="btn-pill-red">Workshops</a>
-        <a href="#" class="btn-pill-outline-dark">Donate -></a>
+        <a href="#donate" class="btn-pill-red">Donate</a>
+        <a href="#shop" class="btn-pill-outline">Shop & Cart</a>
       </div>
-    </div>
-    <div class="support-hero-illustration">
-      <!-- Fist bump / handshake outline -->
-      <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.3">
-        <path d="M60 80 Q60 40 100 40 Q120 40 130 60 Q140 40 160 40 Q200 40 200 80 Q200 120 130 160 Q60 120 60 80Z" stroke="#fff" stroke-width="4" fill="none"/>
-        <path d="M100 60 Q100 45 115 45" stroke="#fff" stroke-width="3"/>
-        <path d="M145 45 Q160 45 160 60" stroke="#fff" stroke-width="3"/>
-        <rect x="110" y="110" width="60" height="40" rx="8" stroke="#fff" stroke-width="3" fill="none"/>
-        <line x1="140" y1="110" x2="140" y2="150" stroke="#fff" stroke-width="2"/>
-      </svg>
     </div>
   </section>
 
-  <!-- HOW CAN CONTRIBUTIONS HELP -->
   <section class="contributions-section">
-    <h2>How can my contributions make a positive impact?</h2>
-    <p class="contrib-sub">The possibilities to further our mission are endless. But what or<br/>even how will that impact our efforts?</p>
-    <p class="contrib-body">It will greatly! by supporting us you help make S.T.E.M accessible,<br/>enable for new ways of thinking, opportunist to explore, and build<br/>creators.</p>
+    <p class="section-kicker">Impact menu</p>
+    <h2>How your support helps students learn by doing</h2>
+    <p class="contrib-sub">Every contribution helps us provide materials, mentorship, and safe creative spaces where students can explore STEM with confidence.</p>
 
-    <!-- 2×2 support option cards -->
     <div class="support-cards-grid">
-      <!-- Amazon Wishlist — yellow -->
-      <div class="support-card sc-yellow">
+      <article class="support-card sc-yellow">
+        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=900&q=80" alt="Packages of donated supplies"/>
         <h3>Amazon Wishlist</h3>
-        <p>We have a list of item we know are needed to continue our programs and efforts. The button below will direct you to our wishlist.</p>
-        <button class="sc-btn sc-btn-red">Wishlist</button>
-      </div>
+        <p>Help restock classroom supplies, electronics, 3D printing materials, notebooks, and tools for upcoming workshops.</p>
+        <a href="#" class="sc-btn sc-btn-red">Wishlist</a>
+      </article>
 
-      <!-- Our Campaign — red -->
-      <div class="support-card sc-red">
+      <article class="support-card sc-red">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics equipment for a student campaign"/>
         <h3>Our Campaign</h3>
-        <p>We have a list of item we know are needed to continue our programs and efforts. The button below will direct you to our wishlist.</p>
-        <button class="sc-btn sc-btn-green">Campaign</button>
-      </div>
+        <p>Support our robotics campaign so more students can build, code, test, and showcase real working robots.</p>
+        <a href="#donate" class="sc-btn sc-btn-green">Campaign</a>
+      </article>
 
-      <!-- Our Shop — green -->
-      <div class="support-card sc-green">
+      <article class="support-card sc-green">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=900&q=80" alt="STEM Club apparel and merchandise"/>
         <h3>Our Shop</h3>
-        <p>We have a list of item we know are needed to continue our programs and efforts. The button below will direct you to our wishlist.</p>
-        <button class="sc-btn sc-btn-blue">Down Below</button>
-      </div>
+        <p>Buy community merch that spreads the brand and helps fund workshops, outreach events, and student projects.</p>
+        <a href="#shop" class="sc-btn sc-btn-blue">Add</a>
+      </article>
 
-      <!-- Partnerships/Sponsors — blue -->
-      <div class="support-card sc-blue">
-        <h3>Partnerships/Sponsers</h3>
-        <p>We have a list of item we know are needed to continue our programs and efforts. The button below will direct you to our wishlist.</p>
-        <button class="sc-btn sc-btn-yellow">Form</button>
-      </div>
+      <article class="support-card sc-blue">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&q=80" alt="Community partners collaborating"/>
+        <h3>Partnerships/Sponsors</h3>
+        <p>Partner with The STEM Club through sponsorships, mentors, space, supplies, career talks, or community events.</p>
+        <a href="#volunteer" class="sc-btn sc-btn-yellow">Form</a>
+      </article>
     </div>
   </section>
 
-  <!-- OUR SHOP SECTION -->
   <section class="our-shop-section" id="shop">
     <div class="shop-title-row">
       <span class="shop-dash">—</span>
       <h2>Our Shop</h2>
       <span class="shop-dash">—</span>
     </div>
-    <div class="shop-cards-grid">
+    <p class="shop-intro">Click Add to place items in your on-site cart. When you are ready, use Checkout to connect your PayPal payment flow.</p>
 
-      <!-- Shop card 1 — blue -->
-      <div class="shop-card shop-blue">
-        <div class="shop-img">
-          <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=300&q=80" alt="Shop Item"/>
-        </div>
-        <div class="shop-body">
-          <h4>Our Shop</h4>
-          <p>We have a list of item dwe know are needed to continue</p>
-          <button class="shop-btn shop-btn-yellow">Down Below</button>
-        </div>
+    <div class="shop-layout">
+      <div class="shop-cards-grid">
+        <article class="shop-card" data-name="STEM Club Tee" data-price="24">
+          <div class="shop-img"><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=900&q=80" alt="STEM Club T-shirt"/></div>
+          <div class="shop-body"><h4>STEM Club Tee</h4><p>Soft everyday shirt for students, volunteers, and supporters.</p><strong>$24</strong><button class="shop-btn">Add</button></div>
+        </article>
+        <article class="shop-card" data-name="Builder Hoodie" data-price="42">
+          <div class="shop-img"><img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=900&q=80" alt="STEM Club hoodie"/></div>
+          <div class="shop-body"><h4>Builder Hoodie</h4><p>Cozy hoodie for workshop days, events, and team meetups.</p><strong>$42</strong><button class="shop-btn">Add</button></div>
+        </article>
+        <article class="shop-card" data-name="Lab Notebook Pack" data-price="12">
+          <div class="shop-img"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80" alt="STEM notebook pack"/></div>
+          <div class="shop-body"><h4>Notebook Pack</h4><p>Project notebooks for sketches, design notes, and test results.</p><strong>$12</strong><button class="shop-btn">Add</button></div>
+        </article>
+        <article class="shop-card" data-name="Sponsor a Kit" data-price="55">
+          <div class="shop-img"><img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=900&q=80" alt="Electronics learning kit"/></div>
+          <div class="shop-body"><h4>Sponsor a Kit</h4><p>Fund a hands-on kit for robotics, circuitry, or coding workshops.</p><strong>$55</strong><button class="shop-btn">Add</button></div>
+        </article>
       </div>
 
-      <!-- Shop card 2 — green -->
-      <div class="shop-card shop-green">
-        <div class="shop-img">
-          <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=300&q=80" alt="Shop Item"/>
-        </div>
-        <div class="shop-body">
-          <h4>Our Shop</h4>
-          <p>We have a list of item dwe know are needed to continue</p>
-          <button class="shop-btn shop-btn-blue">Down Below</button>
-        </div>
-      </div>
-
-      <!-- Shop card 3 — yellow -->
-      <div class="shop-card shop-yellow">
-        <div class="shop-img">
-          <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=300&q=80" alt="Shop Item"/>
-        </div>
-        <div class="shop-body">
-          <h4>Our Shop</h4>
-          <p>We have a list of item dwe know are needed to continue</p>
-          <button class="shop-btn shop-btn-red">Down Below</button>
-        </div>
-      </div>
-
-      <!-- Shop card 4 — red -->
-      <div class="shop-card shop-red">
-        <div class="shop-img">
-          <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=300&q=80" alt="Shop Item"/>
-        </div>
-        <div class="shop-body">
-          <h4>Our Shop</h4>
-          <p>We have a list of item dwe know are needed to continue</p>
-          <button class="shop-btn shop-btn-green">Down Below</button>
-        </div>
-      </div>
-
+      <aside class="cart-panel" aria-live="polite">
+        <h3>Your Cart</h3>
+        <div class="cart-items" data-cart-items><p class="empty-cart">No items yet. Click Add to begin.</p></div>
+        <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
+        <a href="#donate" class="checkout-btn">Checkout</a>
+      </aside>
     </div>
   </section>
 
-  <!-- VOLUNTEER WITH US -->
+  <section class="donation-checkout" id="donate">
+    <div class="payment-card">
+      <p class="section-kicker">PayPal ready</p>
+      <h2>Donate or checkout securely</h2>
+      <p>Add your PayPal business email or PayPal button link when you are ready. This form is structured so the checkout experience has a clear place on the website.</p>
+      <form class="payment-form" action="https://www.paypal.com/donate" method="post">
+        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com"/>
+        <label>Donation / cart amount</label>
+        <input type="number" name="amount" min="1" step="1" placeholder="25" data-payment-amount/>
+        <label>Purpose</label>
+        <select name="item_name">
+          <option>Robotics campaign</option>
+          <option>Workshop supplies</option>
+          <option>Shop checkout</option>
+          <option>General support</option>
+        </select>
+        <button type="submit" class="paypal-btn">Continue to PayPal</button>
+      </form>
+    </div>
+
+    <aside class="campaign-card">
+      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics campaign"/>
+      <h3>Robotics Campaign</h3>
+      <p>Help us purchase reusable robotics kits, sensors, batteries, safety supplies, and tournament-style challenge materials.</p>
+      <div class="progress"><span style="width:35%"></span></div>
+      <div class="campaign-stats"><strong>$2,450 raised</strong><strong>$7,000 goal</strong></div>
+    </aside>
+  </section>
+
   <section class="volunteer-section" id="volunteer">
     <div class="volunteer-title-row">
-      <div class="dash-red"></div>
-      <h3>Volunteer With Us</h3>
-      <div class="dash-red"></div>
+      <span class="dash-red"></span>
+      <h3>Volunteer</h3>
+      <span class="dash-red"></span>
     </div>
-    <h2 class="volunteer-heading">
-      If You Interest! You Can<br/>
-      Join With Us <span class="volunteer-ghost">As A Volunteer.</span>
-    </h2>
-    <p class="volunteer-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500 an when an unknown printer took a galy of type and scrambled it to make a type specimen book. It has survived not only five centuries but electronic typesetting, remaining essentially unchanged.</p>
+    <h2 class="volunteer-heading">Lend time, skills, or partnership support.</h2>
+    <p class="volunteer-body">Tell us how you would like to help. We welcome mentors, event helpers, sponsors, guest speakers, and community partners.</p>
 
-    <!-- Volunteer Form -->
-    <form class="volunteer-form" onsubmit="return false;">
+    <form class="volunteer-form">
       <div class="vf-row">
-        <input type="text" placeholder="First Name"/>
-        <input type="text" placeholder="Last Name"/>
-        <input type="email" placeholder="Email"/>
+        <input type="text" placeholder="Name" required/>
+        <input type="email" placeholder="Email" required/>
       </div>
       <div class="vf-row">
         <input type="text" placeholder="Age"/>
-        <input type="text" placeholder="Religion"/>
-        <input type="tel" placeholder="Phone"/>
+        <input type="tel" placeholder="Phone number"/>
       </div>
       <textarea placeholder="Message"></textarea>
-      <div class="vf-submit-row">
-        <button type="submit" class="btn-submit-orange">Submit Now</button>
-      </div>
+      <div class="vf-submit-row"><button type="submit" class="btn-submit-orange">Submit Now</button></div>
     </form>
   </section>
 
-  
- <!-- FOOTER -->
-<footer class="site-footer">
+  <footer class="site-footer">
+    <div class="footer-socials">
+      <a href="index.html" class="social-circle logo-btn" title="The STEM Club Home">STEM</a>
+      <a href="https://www.facebook.com/people/Thestemclub-Nj/61586101222403/" target="_blank" class="social-circle" title="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/thestemclubnj/" target="_blank" class="social-circle" title="Instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/company/the-stem-club-nj/" target="_blank" class="social-circle" title="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+    <p class="footer-legal"><a href="#">Privacy Policy</a> &nbsp; <a href="#">Legal</a> &nbsp; © 2025 The STEM Club. All rights reserved.</p>
+  </footer>
 
-  <div class="footer-socials">
-
-    <!-- LOGO BUTTON -->
-    <a href="index.html" class="social-circle logo-btn" title="The STEM Club Home">
-      STEM
-    </a>
-
-    <!-- FACEBOOK -->
-    <a href="https://www.facebook.com/people/Thestemclub-Nj/61586101222403/"
-       target="_blank"
-       class="social-circle"
-       title="Facebook">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
-    </a>
-
-    <!-- INSTAGRAM -->
-    <a href="https://www.instagram.com/thestemclubnj/"
-       target="_blank"
-       class="social-circle"
-       title="Instagram">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
-    </a>
-
-    <!-- LINKEDIN -->
-    <a href="https://www.linkedin.com/company/the-stem-club-nj/"
-       target="_blank"
-       class="social-circle"
-       title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
-    </a>
-
-  </div>
-
-  <p class="footer-legal">
-    <a href="#">Privacy Policy</a> &nbsp;
-    <a href="#">Legal</a> &nbsp;
-    © 2025 The STEM Club. All rights reserved.
-  </p>
-
-</footer>
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
