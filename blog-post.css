@@ -19,7 +19,7 @@
 .blog-post-hero-red { background: linear-gradient(135deg, #9e1e18, var(--red)); }
 .blog-post-hero-inner { max-width: 1040px; margin: 0 auto; position: relative; z-index: 1; }
 .blog-back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 22px; font-weight: 900; text-decoration: none; }
-.blog-post-hero h1 { font-family: 'Fredoka', cursive; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.05em; margin-bottom: 14px; }
+.blog-post-hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.05em; margin-bottom: 14px; }
 .blog-post-meta { font-weight: 900; margin-bottom: 14px; opacity: 0.9; }
 .blog-post-summary { max-width: 760px; font-size: 1.18rem; line-height: 1.7; font-weight: 800; }
 .blog-post-wrap { background: linear-gradient(180deg, var(--sky-soft), #fff); padding: 56px 24px 78px; }
@@ -28,7 +28,7 @@
 .blog-post-content { max-width: 860px; margin: 0 auto; padding: 42px; border-radius: 30px; box-shadow: var(--shadow); background: #fff; border: 1px solid rgba(13,79,128,0.08); }
 .blog-post-content p, .blog-post-content li { font-size: 1.08rem; line-height: 1.9; color: #33495c; font-weight: 650; }
 .blog-post-content p + p, .blog-post-content ul + p, .blog-post-content p + ul { margin-top: 18px; }
-.blog-post-content h2 { font-family: 'Fredoka', cursive; font-size: 1.75rem; margin: 36px 0 12px; color: var(--dark-blue); }
+.blog-post-content h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; margin: 36px 0 12px; color: var(--dark-blue); }
 .blog-post-content ul { padding-left: 24px; list-style: disc; }
 .blog-post-content li + li { margin-top: 10px; }
 .blog-post-actions { max-width: 860px; margin: 30px auto 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }

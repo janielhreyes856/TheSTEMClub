@@ -25,7 +25,7 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="support.html">Support Us</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="support.html#donate" class="btn-donate">DONATE</a></li>
+      <li><a href="support.html#payment" class="btn-donate">DONATE</a></li>
     </ul>
   </nav>
 
@@ -37,7 +37,7 @@
       <p class="hero-subtitle">The STEM Club creates welcoming workshops, mentorship, and community projects that help students discover science, technology, engineering, and math with confidence.</p>
       <div class="hero-btns">
         <a href="#workshops" class="btn-pill-yellow">Explore Workshops</a>
-        <a href="support.html#donate" class="btn-pill-green">Donate</a>
+        <a href="support.html#payment" class="btn-pill-green">Donate</a>
       </div>
     </div>
     <div class="home-hero-right">
@@ -55,24 +55,27 @@
     <div class="mvv-grid">
       <!-- Mission — blue -->
       <div class="mvv-card mvv-blue">
-        <div class="mvv-icon">🎯</div>
+        <div class="mvv-icon" aria-hidden="true">
+          <svg viewBox="0 0 96 96" role="img" focusable="false"><circle cx="48" cy="48" r="32" fill="#d9f1ff"/><circle cx="48" cy="48" r="22" fill="#29ABE2"/><circle cx="48" cy="48" r="10" fill="#fff"/><path d="M62 26 78 10l2 14 14 2-16 16-14-2-2-14Z" fill="#0d4f80"/><path d="m48 48 22-22" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>
+        </div>
         <h3>Mission</h3>
         <p>Make hands-on STEM learning accessible, encouraging, and practical for students who are ready to explore new possibilities.</p>
-        <button class="btn-mvv-white">View Details</button>
       </div>
       <!-- Vision — green -->
       <div class="mvv-card mvv-green">
-        <div class="mvv-icon">👥</div>
+        <div class="mvv-icon" aria-hidden="true">
+          <svg viewBox="0 0 96 96" role="img" focusable="false"><path d="M16 76c5-17 19-27 32-27s27 10 32 27" fill="#dff6d7"/><circle cx="48" cy="31" r="17" fill="#5CBF2A"/><path d="M18 61c4-10 12-16 22-18M78 61c-4-10-12-16-22-18" stroke="#0d4f80" stroke-width="7" stroke-linecap="round"/><path d="M33 77c3-10 9-16 15-16s12 6 15 16" fill="#29ABE2"/></svg>
+        </div>
         <h3>Vision</h3>
         <p>A community where every learner can see themselves as a builder, problem-solver, creator, and future STEM leader.</p>
-        <button class="btn-mvv-white">View Details</button>
       </div>
       <!-- Values — yellow -->
       <div class="mvv-card mvv-yellow">
-        <div class="mvv-icon">🤝</div>
+        <div class="mvv-icon" aria-hidden="true">
+          <svg viewBox="0 0 96 96" role="img" focusable="false"><path d="M24 20h48v36c0 17-12 28-24 34-12-6-24-17-24-34V20Z" fill="#fff4bf"/><path d="M35 49 45 59 64 36" fill="none" stroke="#0d4f80" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="21" r="9" fill="#29ABE2"/><circle cx="72" cy="21" r="9" fill="#5CBF2A"/><path d="M24 31v21M72 31v21" stroke="#F5C518" stroke-width="8" stroke-linecap="round"/></svg>
+        </div>
         <h3>Values</h3>
         <p>Curiosity, service, teamwork, creativity, and belonging guide every workshop, volunteer experience, and partnership.</p>
-        <button class="btn-mvv-white">View Details</button>
       </div>
     </div>
   </section>
@@ -99,7 +102,7 @@
           <span class="sep">|</span>
           <span>✔️ Community impact</span>
         </div>
-        <a href="support.html#donate" class="btn-donate-red">DONATE</a>
+        <a href="support.html#payment" class="btn-donate-red">DONATE</a>
       </div>
     </div>
   </section>
@@ -107,65 +110,51 @@
   <!-- WORKSHOPS -->
   <section class="workshops-section" id="workshops">
     <div class="workshops-title-deco">
-      <div class="dash red-dash"></div>
-      <h2>Workshops 🔩</h2>
-      <div class="dash red-dash"></div>
+      <div class="dash yellow-dash"></div>
+      <h2>Workshops</h2>
+      <div class="dash yellow-dash"></div>
     </div>
-    <div class="workshops-inner">
-      <!-- Left: workshop cards -->
-      <div class="workshop-cards">
-        <!-- Mechanical -->
-        <div class="workshop-row ws-red">
-          <div class="ws-img">
-            <img src="https://images.unsplash.com/photo-1581092921461-7031e88a2405?w=1000&q=80" alt="Mechanical"/>
-          </div>
-          <div class="ws-body">
-            <h3>Mechanical</h3>
-            <p>Example lesson: students could design a simple assistive device, sketch the idea, model it in CAD, test materials, and learn how gears, levers, measurements, and 3D printing turn an idea into a working prototype.</p>
-          </div>
+    <div class="workshop-cards">
+      <article class="workshop-card ws-red">
+        <div class="ws-img">
+          <img src="https://images.unsplash.com/photo-1581092921461-7031e88a2405?w=1000&q=80" alt="Mechanical workshop"/>
         </div>
-        <!-- Electrical -->
-        <div class="workshop-row ws-yellow">
-          <div class="ws-body ws-body-left">
-            <h3>Electrical</h3>
-            <p>Example lesson: students could build a light-up safety badge or mini alarm while learning voltage, resistance, breadboards, sensors, LEDs, and how engineers troubleshoot circuits safely.</p>
-          </div>
-          <div class="ws-img">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80" alt="Electrical"/>
-          </div>
+        <div class="ws-body">
+          <h3>Mechanical</h3>
+          <p>Example lesson: students could design a simple assistive device, sketch the idea, model it in CAD, test materials, and learn how gears, levers, measurements, and 3D printing turn an idea into a working prototype.</p>
+          <a href="#contact" class="ws-btn">Contact Us</a>
         </div>
-        <!-- Computer -->
-        <div class="workshop-row ws-blue">
-          <div class="ws-img">
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1000&q=80" alt="Computer"/>
-          </div>
-          <div class="ws-body">
-            <h3>Computer</h3>
-            <p>Example lesson: students could code an interactive game or robot controller, learning variables, loops, logic, debugging, user experience, and how software can solve real community problems.</p>
-          </div>
+      </article>
+      <article class="workshop-card ws-yellow">
+        <div class="ws-img">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80" alt="Electrical workshop"/>
         </div>
-      </div>
-
-      <!-- Right: Urgent Causes -->
-      <div class="urgent-causes">
-        <h4 class="urgent-title">Our Campaign</h4>
-        <div class="urgent-divider"></div>
-       <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="Student robotics campaign" class="urgent-img"/>
-        <p class="urgent-caption">Help us bring robotics kits, tools, and mentor-led build sessions to more students.</p>
-        <div class="urgent-goal-row">
-          <span>Goal</span>
-          <span>Raised</span>
+        <div class="ws-body">
+          <h3>Electrical</h3>
+          <p>Example lesson: students could build a light-up safety badge or mini alarm while learning voltage, resistance, breadboards, sensors, LEDs, and how engineers troubleshoot circuits safely.</p>
+          <a href="#contact" class="ws-btn">Contact Us</a>
         </div>
-        <div class="urgent-amounts">
-          <span>$7,000</span>
-          <span>$2,450</span>
+      </article>
+      <article class="workshop-card ws-blue">
+        <div class="ws-img">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1000&q=80" alt="Computer workshop"/>
         </div>
-        <div class="donation-amounts">
-          <span>$10</span><span>$35</span><span>$50</span><span>$99</span>
+        <div class="ws-body">
+          <h3>Computer</h3>
+          <p>Example lesson: students could code an interactive game or robot controller, learning variables, loops, logic, debugging, user experience, and how software can solve real community problems.</p>
+          <a href="#contact" class="ws-btn">Contact Us</a>
         </div>
-        <input type="text" placeholder="Custom Amount" class="custom-amount"/>
-        <a href="support.html#donate" class="btn-donate-orange">Donate Now</a>
-      </div>
+      </article>
+      <article class="workshop-card ws-green">
+        <div class="ws-img">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1000&q=80" alt="Student robotics campaign"/>
+        </div>
+        <div class="ws-body">
+          <h3>Our Campaign</h3>
+          <p>Help us bring robotics kits, tools, and mentor-led build sessions to more students through our ongoing STEM access campaign.</p>
+          <a href="#contact" class="ws-btn">Contact Us</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -185,7 +174,7 @@
     </div>
     <div class="sw-btns">
       <a href="support.html#shop" class="btn-green-pill">Our Shop -></a>
-      <a href="support.html#donate" class="btn-red-pill">Support Our Campaign</a>
+      <a href="support.html#payment" class="btn-red-pill">Support Our Campaign</a>
     </div>
   </section>
 
@@ -196,7 +185,7 @@
       <h2>Contact</h2>
       <div class="dash"></div>
     </div>
-    <div class="contact-form-card">
+    <form class="contact-form-card">
       <div class="form-row">
         <div class="form-group">
           <label>First Name *</label>
@@ -215,8 +204,8 @@
         <label>Message</label>
         <textarea placeholder="Tell us about your interest..."></textarea>
       </div>
-      <button class="btn-submit" onclick="event.preventDefault()">Submit</button>
-    </div>
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
   </section>
 
 <!-- FOOTER -->

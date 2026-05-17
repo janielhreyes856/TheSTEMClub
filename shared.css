@@ -2,12 +2,12 @@
    The STEM Club — shared nonprofit brand system
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #17324d;
   background: #f7fbff;
   overflow-x: hidden;
@@ -163,26 +163,24 @@ ul { list-style: none; }
   width: 36px;
   height: 4px;
   border-radius: 99px;
-  background: linear-gradient(90deg, var(--red), var(--yellow), var(--green), var(--blue));
+  background: var(--blue);
 }
 
 /* ── SUPPORT OUR WORK BANNER ── */
 .support-work-banner {
-  background:
-    radial-gradient(circle at top left, rgba(245,197,24,0.35), transparent 30%),
-    linear-gradient(135deg, var(--dark-blue), var(--blue));
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(135deg, var(--dark-blue), var(--blue));
+  display: grid;
+  grid-template-columns: auto minmax(260px, 660px) auto;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  padding: 58px 32px;
-  text-align: center;
+  gap: 28px;
+  padding: 54px 32px;
+  text-align: left;
 }
 .support-work-banner .heart-icon,
 .support-work-banner .heart-icon svg { width: 96px; height: 96px; }
 .support-work-banner .sw-text h2 {
-  font-family: 'Fredoka', cursive;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3.3rem);
   color: #fff;
   margin-bottom: 10px;
@@ -192,7 +190,7 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.9);
   max-width: 720px;
   line-height: 1.7;
-  margin: 0 auto;
+  margin: 0;
 }
 .support-work-banner .sw-btns {
   display: flex;
@@ -216,22 +214,22 @@ ul { list-style: none; }
 }
 .section-title-deco .dash {
   width: 50px; height: 5px;
-  background: linear-gradient(90deg, var(--red), var(--yellow));
+  background: var(--yellow);
   border-radius: 99px;
 }
 .section-title-deco h2 {
-  font-family: 'Fredoka', cursive;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--ink);
 }
 .contact-form-card {
-  background: #fff;
-  border-radius: 28px;
-  padding: 38px 40px;
-  max-width: 680px;
+  background: rgba(255,255,255,0.94);
+  border-radius: 32px;
+  padding: 42px;
+  max-width: 760px;
   margin: 0 auto;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(41,171,226,0.16);
+  box-shadow: 0 24px 60px rgba(13,79,128,0.16);
+  border: 1px solid rgba(41,171,226,0.2);
 }
 .contact-form-card .form-row {
   display: grid;
@@ -251,7 +249,7 @@ ul { list-style: none; }
   border: 1px solid rgba(13,79,128,0.22);
   border-radius: 14px;
   padding: 13px 15px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -271,19 +269,19 @@ ul { list-style: none; }
 .contact-form-card textarea { resize: vertical; min-height: 120px; }
 .btn-submit {
   width: 100%;
-  background: var(--red);
+  background: var(--blue);
   color: #fff;
   border: none;
   border-radius: 999px;
   padding: 15px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 900;
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
   margin-top: 4px;
 }
-.btn-submit:hover { background: #c0221b; transform: translateY(-2px); }
+.btn-submit:hover { background: var(--dark-blue); transform: translateY(-2px); }
 
 /* ── FOOTER ── */
 .site-footer {
@@ -319,4 +317,11 @@ ul { list-style: none; }
   .nav-links { margin-left: 0; justify-content: center; gap: 14px; }
   .contact-form-card .form-row { grid-template-columns: 1fr; }
   .support-work-banner .sw-btns { flex-direction: column; width: min(100%, 320px); }
+}
+
+
+/* Responsive support banner layout */
+@media (max-width: 900px) {
+  .support-work-banner { grid-template-columns: 1fr; text-align: center; }
+  .support-work-banner .sw-text p { margin: 0 auto; }
 }
