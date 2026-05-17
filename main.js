@@ -2,16 +2,51 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
+  const setNavOffset = () => {
+    if (!navbar) return;
+    document.documentElement.style.setProperty('--nav-scroll-offset', `${navbar.offsetHeight + 24}px`);
+  };
+
   if (navbar) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateNavbar = () => {
+      const currentScrollY = Math.max(window.scrollY, 0);
+      const isCompact = currentScrollY > 24;
+      const isScrollingDown = currentScrollY > lastScrollY + 6;
+      const isScrollingUp = currentScrollY < lastScrollY - 6;
+
+      navbar.classList.toggle('navbar--compact', isCompact);
+
+      if (!isCompact) {
+        navbar.classList.remove('navbar--retracted');
+      } else if (isScrollingDown && currentScrollY > navbar.offsetHeight + 80) {
+        navbar.classList.add('navbar--retracted');
+      } else if (isScrollingUp) {
+        navbar.classList.remove('navbar--retracted');
+      }
+
+      setNavOffset();
+      lastScrollY = currentScrollY;
+      ticking = false;
+    };
+
+    updateNavbar();
     window.addEventListener('scroll', () => {
-      navbar.style.boxShadow = window.scrollY > 10
-        ? '0 10px 30px rgba(23,50,77,0.12)'
-        : 'none';
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
     }, { passive: true });
+    window.addEventListener('resize', setNavOffset);
+    window.addEventListener('load', setNavOffset);
+    navbar.addEventListener('transitionend', setNavOffset);
   }
 
   const navLinks = [...document.querySelectorAll('.nav-links a:not(.btn-donate)')];
-  const samePagePath = url => url.pathname.replace(/\/$/, '/index.html') === window.location.pathname.replace(/\/$/, '/index.html');
+  const normalizePath = path => path.replace(/\/$/, '/index.html');
+  const samePagePath = url => normalizePath(url.pathname) === normalizePath(window.location.pathname);
   const setActiveNav = () => {
     const currentHash = window.location.hash;
     navLinks.forEach(link => link.classList.remove('active'));
@@ -130,15 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
-      const id = anchor.getAttribute('href');
-      if (id === '#') return;
-      const target = document.querySelector(id);
+      const url = new URL(anchor.href);
+      if (!url.hash || url.hash === '#' || !samePagePath(url)) return;
+
+      const target = document.querySelector(url.hash);
       if (target) {
         e.preventDefault();
+        navbar?.classList.remove('navbar--retracted');
+        setNavOffset();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, '', id);
+        history.pushState(null, '', url.hash);
         setActiveNav();
       }
     });
