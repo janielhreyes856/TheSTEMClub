@@ -40,6 +40,11 @@ ul { list-style: none; }
   top: 0;
   z-index: 999;
 }
+.navbar .logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 .navbar .logo img {
   height: 64px;
   width: auto;
@@ -53,15 +58,41 @@ ul { list-style: none; }
   font-weight: 700;
   color: #222;
 }
-.nav-links a {
+.nav-links a:not(.btn-donate) {
+  --underline-color: var(--red);
   position: relative;
-  padding-bottom: 3px;
-  transition: color 0.2s;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #000;
+  transition: none;
 }
-.nav-links a.active {
-  border-bottom: 2.5px solid #222;
+.nav-links a:not(.btn-donate)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.5px;
+  background: var(--underline-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
 }
-.nav-links a:hover { color: var(--red); }
+.nav-links a:not(.btn-donate):hover,
+.nav-links a:not(.btn-donate):focus,
+.nav-links a:not(.btn-donate):active,
+.nav-links a:not(.btn-donate).active {
+  color: #000;
+}
+.nav-links a:not(.btn-donate):hover::after {
+  transform: scaleX(1);
+}
+.nav-links li:nth-child(1) a:not(.btn-donate) { --underline-color: var(--red); }
+.nav-links li:nth-child(2) a:not(.btn-donate) { --underline-color: var(--blue); }
+.nav-links li:nth-child(3) a:not(.btn-donate) { --underline-color: var(--yellow); }
+.nav-links li:nth-child(4) a:not(.btn-donate) { --underline-color: var(--green); }
+.nav-links li:nth-child(5) a:not(.btn-donate) { --underline-color: var(--blue); }
+.nav-links li:nth-child(6) a:not(.btn-donate) { --underline-color: var(--yellow); }
 .btn-donate {
   background: var(--red);
   color: #fff !important;
