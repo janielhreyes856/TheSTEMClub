@@ -8,27 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (navbar) {
-    let lastScrollY = window.scrollY;
     let ticking = false;
 
     const updateNavbar = () => {
       const currentScrollY = Math.max(window.scrollY, 0);
       const isCompact = currentScrollY > 24;
-      const isScrollingDown = currentScrollY > lastScrollY + 6;
-      const isScrollingUp = currentScrollY < lastScrollY - 6;
 
       navbar.classList.toggle('navbar--compact', isCompact);
-
-      if (!isCompact) {
-        navbar.classList.remove('navbar--retracted');
-      } else if (isScrollingDown && currentScrollY > navbar.offsetHeight + 80) {
-        navbar.classList.add('navbar--retracted');
-      } else if (isScrollingUp) {
-        navbar.classList.remove('navbar--retracted');
-      }
-
       setNavOffset();
-      lastScrollY = currentScrollY;
       ticking = false;
     };
 
@@ -165,6 +152,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const scrollToSectionTop = (target, behavior = 'smooth') => {
+    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+    const willUseCompactNav = navbar && targetTop > 24;
+    navbar?.classList.toggle('navbar--compact', Boolean(willUseCompactNav));
+    setNavOffset();
+    const scrollOffset = navbar ? navbar.offsetHeight : 0;
+    window.scrollTo({
+      top: Math.max(targetTop - scrollOffset, 0),
+      behavior
+    });
+  };
+
   document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const url = new URL(anchor.href);
@@ -173,12 +172,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(url.hash);
       if (target) {
         e.preventDefault();
-        navbar?.classList.remove('navbar--retracted');
-        setNavOffset();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToSectionTop(target);
         history.pushState(null, '', url.hash);
         setActiveNav();
       }
     });
   });
+
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      window.requestAnimationFrame(() => scrollToSectionTop(target, 'auto'));
+      window.addEventListener('load', () => scrollToSectionTop(target, 'auto'), { once: true });
+    }
+  }
 });
