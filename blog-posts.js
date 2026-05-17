@@ -175,7 +175,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'how-to-get-involved-in-stem',
-    title: 'How to get invloved in STEM',
+    title: 'How to Get Involved in STEM',
     date: 'Coming soon',
     theme: 'blue',
     summary: 'Getting involved in STEM can begin with curiosity, a simple project, and a willingness to learn with others.',

@@ -1,227 +1,162 @@
+/* Blog index — technical publication styling */
 
-/* ─────────────────────────────
-   HERO SECTION
-──────────────────────────── */
 .blog-hero {
-  background: var(--green);
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 32px;
   align-items: center;
-  justify-content: space-between;
-  padding: 44px 52px;
-  min-height: 220px;
-  position: relative;
+  min-height: 420px;
+  padding: clamp(70px, 9vw, 118px) clamp(20px, 6vw, 72px);
   overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(56, 189, 248, 0.18), transparent 28rem),
+    linear-gradient(135deg, #08111f, #070b12 70%);
+  border-bottom: 1px solid var(--line);
 }
-
-.blog-hero-text {
-  z-index: 2;
-  position: relative;
-}
-
-.blog-hero-text h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.1rem;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.blog-hero-illustration {
+.blog-hero::before {
+  content: "Research notes / field guides / technical literacy";
   position: absolute;
-  right: 52px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 280px;
+  left: clamp(20px, 6vw, 72px);
+  top: 36px;
+  color: var(--accent-2);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
-
-.blog-hero-illustration svg {
+.blog-hero-text { position: relative; z-index: 1; max-width: 840px; }
+.blog-hero-text h1 {
+  margin-bottom: 24px;
+  color: var(--white);
+  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.075em;
+}
+.blog-hero-text h1::after {
+  content: "Clear, practical writing for curious adults, parents, mentors, and emerging technologists.";
+  display: block;
+  max-width: 680px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+}
+.blog-hero-illustration {
+  position: relative;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(56,189,248,0.08), transparent),
+    rgba(13, 20, 32, 0.72);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  place-items: center;
 }
+.blog-hero-illustration::after {
+  content: "STEM\\A Journal";
+  white-space: pre;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+.blog-hero-illustration svg { display: none; }
 
-
-/* ─────────────────────────────
-   BLOG GRID
-──────────────────────────── */
 .blog-cards-section {
-  padding: 60px 52px;
-  background: #fff;
+  padding: var(--section) clamp(20px, 5vw, 64px);
+  background: linear-gradient(180deg, var(--bg), #080d15);
 }
-
 .blog-cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: var(--max);
   margin: 0 auto;
 }
-
-
-/* ─────────────────────────────
-   BLOG CARD BASE
-──────────────────────────── */
 .blog-card {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-4px);
-}
-
-
-/* COLOR THEMES */
-.blog-card-blue   { background: var(--blue); }
-.blog-card-green  { background: var(--green); }
-.blog-card-yellow { background: var(--yellow); }
-.blog-card-red    { background: var(--red); }
-
-
-/* ─────────────────────────────
-   IMAGE / PLACEHOLDER BOX
-──────────────────────────── */
-.bc-img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 360px;
   overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(17, 26, 41, 0.92), rgba(13, 20, 32, 0.92));
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
-
-/* REAL IMAGES (if used later) */
-.bc-img img {
+.blog-card:hover { transform: translateY(-5px); border-color: rgba(56,189,248,0.42); box-shadow: var(--shadow-md); }
+.blog-card-blue,
+.blog-card-green,
+.blog-card-yellow,
+.blog-card-red { background: linear-gradient(180deg, rgba(17, 26, 41, 0.96), rgba(13, 20, 32, 0.9)); }
+.bc-img {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  aspect-ratio: 16 / 8;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(56,189,248,0.14), rgba(139,92,246,0.08)),
+    repeating-linear-gradient(90deg, rgba(148,163,184,0.08) 0 1px, transparent 1px 28px),
+    #0b1220;
+  border-bottom: 1px solid var(--line);
 }
-
-/* COMING SOON PLACEHOLDER */
+.bc-img::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+}
 .bc-img.coming-soon {
-  background: #ffffff;
-  color: #000;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
+  color: var(--accent-2);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-
-  border: 2px dashed rgba(0,0,0,0.25);
 }
-
-
-/* ─────────────────────────────
-   CARD CONTENT
-──────────────────────────── */
-.bc-body {
-  padding: 14px 18px 16px;
-}
-
+.bc-img img { width: 100%; height: 100%; object-fit: cover; }
+.bc-body { display: flex; flex-direction: column; flex: 1; padding: 26px; }
 .bc-body h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 6px;
+  color: var(--text) !important;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  margin-bottom: 24px;
 }
-
-/* FIX: yellow card dark text */
-.blog-card-yellow .bc-body h3 {
-  color: #222;
-}
-
-
-/* ─────────────────────────────
-   META (DATE + LINK)
-──────────────────────────── */
 .bc-meta {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 0.82rem;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.86rem;
   font-weight: 700;
 }
-
-.bc-meta span {
-  color: rgba(255,255,255,0.9);
-}
-
 .bc-meta a {
-  color: rgba(255,255,255,0.9);
-  font-weight: 800;
-  text-decoration: none;
+  color: var(--accent-2) !important;
+  font-weight: 900;
+  transition: color 180ms ease;
 }
+.bc-meta a:hover { color: var(--text) !important; }
+.bc-meta span { color: var(--muted) !important; }
 
-/* FIX: yellow card text */
-.blog-card-yellow .bc-meta span,
-.blog-card-yellow .bc-meta a {
-  color: #222;
+@media (max-width: 860px) {
+  .blog-hero { grid-template-columns: 1fr; }
+  .blog-hero-illustration { max-width: 280px; }
+  .blog-cards-grid { grid-template-columns: 1fr; }
 }
-
-
-footer
-
-footer
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 12px;
+@media (max-width: 560px) {
+  .blog-hero::before { position: static; display: block; margin-bottom: 18px; }
+  .bc-meta { align-items: flex-start; flex-direction: column; }
 }
-
-/* BASE BUTTON */
-.social-circle {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: 0.25s ease;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-/* ICON SIZE */
-.social-circle img {
-  width: 60%;
-  height: 60%;
-  filter: brightness(0) invert(1); /* makes SVG icons white */
-}
-
-/* FACEBOOK */
-.social-circle[href*="facebook"] {
-  background: #1877F2;
-}
-
-/* INSTAGRAM */
-.social-circle[href*="instagram"] {
-  background: radial-gradient(circle at 30% 107%,
-    #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-/* LINKEDIN */
-.social-circle[href*="linkedin"] {
-  background: #0A66C2;
-}
-
-/* STEM LOGO */
-.logo-btn {
-  background: #111;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-/* HOVER EFFECT */
-.social-circle:hover {
-  transform: translateY(-3px) scale(1.08);
-  opacity: 0.9;
-}
-
-
-
