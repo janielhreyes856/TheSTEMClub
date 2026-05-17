@@ -26,11 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const summary = page.querySelector('[data-post-summary]');
   const content = page.querySelector('[data-post-content]');
   const hero = page.querySelector('[data-post-hero]');
+  const image = page.querySelector('[data-post-image]');
 
   if (title) title.textContent = post.title;
   if (date) date.textContent = post.date;
   if (summary) summary.textContent = post.summary;
   if (hero) hero.classList.add(`blog-post-hero-${post.theme}`);
+  if (image && post.image) {
+    image.src = post.image;
+    image.alt = post.title;
+  }
   if (content) {
     content.textContent = '';
     post.content.forEach(block => content.appendChild(createContentBlock(block)));

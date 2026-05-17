@@ -1,6 +1,7 @@
 const BLOG_POSTS = [
   {
     slug: 'what-is-stem',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400&q=80',
     title: 'What Is S.T.E.M.?',
     date: 'Coming soon',
     theme: 'blue',
@@ -39,6 +40,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'why-stem-education-matters',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400&q=80',
     title: 'Why STEM Education Matters?',
     date: 'Coming soon',
     theme: 'green',
@@ -73,6 +75,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'future-of-stem-careers',
+    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df7b?w=1400&q=80',
     title: 'The Future Of STEM Careers',
     date: 'Coming soon',
     theme: 'yellow',
@@ -107,6 +110,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'stem-for-the-next-growth',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=80',
     title: 'S.T.E.M. for the Next Growth',
     date: 'Coming soon',
     theme: 'red',
@@ -141,6 +145,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'how-stem-changes-communities',
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1400&q=80',
     title: 'How STEM Changes Communities',
     date: 'Coming soon',
     theme: 'green',
@@ -175,6 +180,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'how-to-get-involved-in-stem',
+    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1400&q=80',
     title: 'How to get invloved in STEM',
     date: 'Coming soon',
     theme: 'blue',

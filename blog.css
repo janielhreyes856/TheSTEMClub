@@ -1,227 +1,31 @@
-
-/* ─────────────────────────────
-   HERO SECTION
-──────────────────────────── */
 .blog-hero {
-  background: var(--green);
+  background:
+    linear-gradient(105deg, rgba(15,110,70,0.92), rgba(92,191,42,0.74)),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1600&q=80") center / cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 52px;
-  min-height: 220px;
+  padding: 84px 52px;
+  min-height: 430px;
   position: relative;
   overflow: hidden;
 }
-
-.blog-hero-text {
-  z-index: 2;
-  position: relative;
-}
-
-.blog-hero-text h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.1rem;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.blog-hero-illustration {
-  position: absolute;
-  right: 52px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 280px;
-}
-
-.blog-hero-illustration svg {
-  width: 100%;
-  height: auto;
-}
-
-
-/* ─────────────────────────────
-   BLOG GRID
-──────────────────────────── */
-.blog-cards-section {
-  padding: 60px 52px;
-  background: #fff;
-}
-
-.blog-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-
-/* ─────────────────────────────
-   BLOG CARD BASE
-──────────────────────────── */
-.blog-card {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-4px);
-}
-
-
-/* COLOR THEMES */
-.blog-card-blue   { background: var(--blue); }
-.blog-card-green  { background: var(--green); }
-.blog-card-yellow { background: var(--yellow); }
-.blog-card-red    { background: var(--red); }
-
-
-/* ─────────────────────────────
-   IMAGE / PLACEHOLDER BOX
-──────────────────────────── */
-.bc-img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* REAL IMAGES (if used later) */
-.bc-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* COMING SOON PLACEHOLDER */
-.bc-img.coming-soon {
-  background: #ffffff;
-  color: #000;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  border: 2px dashed rgba(0,0,0,0.25);
-}
-
-
-/* ─────────────────────────────
-   CARD CONTENT
-──────────────────────────── */
-.bc-body {
-  padding: 14px 18px 16px;
-}
-
-.bc-body h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 6px;
-}
-
-/* FIX: yellow card dark text */
-.blog-card-yellow .bc-body h3 {
-  color: #222;
-}
-
-
-/* ─────────────────────────────
-   META (DATE + LINK)
-──────────────────────────── */
-.bc-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.bc-meta span {
-  color: rgba(255,255,255,0.9);
-}
-
-.bc-meta a {
-  color: rgba(255,255,255,0.9);
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* FIX: yellow card text */
-.blog-card-yellow .bc-meta span,
-.blog-card-yellow .bc-meta a {
-  color: #222;
-}
-
-
-footer
-
-footer
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 12px;
-}
-
-/* BASE BUTTON */
-.social-circle {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: 0.25s ease;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-/* ICON SIZE */
-.social-circle img {
-  width: 60%;
-  height: 60%;
-  filter: brightness(0) invert(1); /* makes SVG icons white */
-}
-
-/* FACEBOOK */
-.social-circle[href*="facebook"] {
-  background: #1877F2;
-}
-
-/* INSTAGRAM */
-.social-circle[href*="instagram"] {
-  background: radial-gradient(circle at 30% 107%,
-    #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-/* LINKEDIN */
-.social-circle[href*="linkedin"] {
-  background: #0A66C2;
-}
-
-/* STEM LOGO */
-.logo-btn {
-  background: #111;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-/* HOVER EFFECT */
-.social-circle:hover {
-  transform: translateY(-3px) scale(1.08);
-  opacity: 0.9;
-}
-
-
-
+.blog-hero-text { z-index: 2; position: relative; max-width: 720px; }
+.blog-hero-text h1 { font-family: 'Fredoka', cursive; font-size: clamp(3rem, 6vw, 5.6rem); color: #fff; line-height: 1; letter-spacing: -0.05em; margin-bottom: 26px; }
+.blog-hero-illustration { position: absolute; right: 52px; top: 50%; transform: translateY(-50%); width: 340px; }
+.blog-hero-illustration svg { width: 100%; height: auto; }
+.blog-cards-section { padding: 84px 52px; background: linear-gradient(180deg, #fff, var(--sky-soft)); }
+.blog-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; max-width: 1240px; margin: 0 auto; }
+.blog-card { border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; transition: transform 0.2s ease; background: #fff; border: 1px solid rgba(13,79,128,0.08); }
+.blog-card:hover { transform: translateY(-6px); }
+.blog-card-blue { border-bottom: 9px solid var(--blue); } .blog-card-green { border-bottom: 9px solid var(--green); } .blog-card-yellow { border-bottom: 9px solid var(--yellow); } .blog-card-red { border-bottom: 9px solid var(--red); }
+.bc-img { width: 100%; aspect-ratio: 16/10; overflow: hidden; background: #fff; }
+.bc-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.blog-card:hover .bc-img img { transform: scale(1.04); }
+.bc-body { padding: 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.bc-body h3 { font-family: 'Fredoka', cursive; font-size: 1.35rem; color: var(--ink); line-height: 1.2; }
+.bc-meta { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 0.9rem; font-weight: 900; margin-top: auto; }
+.bc-meta span { color: var(--muted); }
+.bc-meta a { color: var(--dark-blue); font-weight: 900; }
+@media (max-width: 1000px) { .blog-cards-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .blog-hero, .blog-cards-section { padding-left: 22px; padding-right: 22px; } .blog-cards-grid { grid-template-columns: 1fr; } .blog-hero-illustration { display: none; } }
