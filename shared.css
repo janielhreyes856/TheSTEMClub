@@ -53,20 +53,12 @@ ul { list-style: none; }
   backdrop-filter: blur(12px);
   box-shadow: none;
   transform: translateY(0);
-  transition: padding 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  transition: padding 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 .navbar.navbar--compact {
   padding: 8px 52px;
   border-bottom-color: rgba(41,171,226,0.26);
   box-shadow: 0 10px 30px rgba(23,50,77,0.12);
-}
-.navbar.navbar--retracted {
-  transform: translateY(calc(-100% + 14px));
-  box-shadow: 0 14px 30px rgba(23,50,77,0.1);
-}
-.navbar.navbar--retracted:hover,
-.navbar.navbar--retracted:focus-within {
-  transform: translateY(0);
 }
 .navbar .logo {
   display: inline-flex;
