@@ -1,6 +1,24 @@
 /* main.js — STEM Club shared JS */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const paypalLink = 'PASTE_PAYPAL_URL_HERE';
+  const paypalFallbackLink = 'https://www.paypal.com/donate';
+
+  const buildPaypalLink = amount => {
+    const configuredLink = paypalLink.trim();
+    const baseLink = configuredLink.startsWith('http') ? configuredLink : paypalFallbackLink;
+    if (!amount) return baseLink;
+
+    try {
+      const url = new URL(baseLink, window.location.origin);
+      url.searchParams.set('amount', amount);
+      return url.toString();
+    } catch (error) {
+      const separator = baseLink.includes('?') ? '&' : '?';
+      return `${baseLink}${separator}amount=${encodeURIComponent(amount)}`;
+    }
+  };
+
   const navbar = document.querySelector('.navbar');
   const NAVBAR_COMPACT_THRESHOLD = 24;
   const NAVBAR_EXPAND_THRESHOLD = 4;
@@ -112,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-donation-custom], [data-payment-amount]').forEach(input => { input.value = amount; });
     document.querySelectorAll('[data-paypal-amount]').forEach(input => { input.value = amount; });
     document.querySelectorAll('[data-paypal-donate]').forEach(link => {
-      link.href = amount ? `https://www.paypal.com/donate?amount=${encodeURIComponent(amount)}` : 'https://www.paypal.com/donate';
+      link.href = buildPaypalLink(amount);
     });
   };
 
@@ -126,6 +144,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-donation-custom], [data-payment-amount]').forEach(input => {
     input.addEventListener('input', () => syncDonationAmount(input.value));
+  });
+
+  syncDonationAmount(getDonationAmount());
+
+  document.querySelectorAll('[data-paypal-form]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const amount = form.querySelector('[data-paypal-amount]')?.value || getDonationAmount();
+      window.open(buildPaypalLink(amount), '_blank', 'noopener');
+    });
   });
 
   const cartStorageKey = 'stemClubCart';
