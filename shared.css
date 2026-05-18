@@ -35,6 +35,7 @@ ul { list-style: none; }
   --white: #fff;
   --black: #111;
   --shadow: 0 20px 45px rgba(23, 50, 77, 0.12);
+  --support-work-gradient: linear-gradient(135deg, var(--dark-blue), var(--blue));
   --nav-scroll-offset: 176px;
 }
 
@@ -198,7 +199,7 @@ ul { list-style: none; }
 
 /* ── SUPPORT OUR WORK BANNER ── */
 .support-work-banner {
-  background: linear-gradient(135deg, var(--dark-blue), var(--blue));
+  background: var(--support-work-gradient);
   display: grid;
   grid-template-columns: auto minmax(260px, 660px) auto;
   align-items: center;
