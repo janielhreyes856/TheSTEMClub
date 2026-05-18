@@ -75,7 +75,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'future-of-stem-careers',
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df7b?w=1400&q=80',
+    image: '/assets/future-stem-careers.svg',
     title: 'The Future Of STEM Careers',
     date: 'Coming soon',
     theme: 'yellow',
