@@ -2,6 +2,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
+  const NAVBAR_COMPACT_THRESHOLD = 24;
+  const NAVBAR_EXPAND_THRESHOLD = 4;
+  let setNavbarCompact = shouldCompact => {
+    if (!navbar) return;
+    navbar.classList.toggle('navbar--compact', shouldCompact);
+    setNavOffset();
+  };
   const setNavOffset = () => {
     if (!navbar) return;
     document.documentElement.style.setProperty('--nav-scroll-offset', `${navbar.offsetHeight + 24}px`);
@@ -9,17 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (navbar) {
     let ticking = false;
+    let isNavbarCompact = navbar.classList.contains('navbar--compact');
+
+    setNavbarCompact = shouldCompact => {
+      if (shouldCompact === isNavbarCompact) return;
+      isNavbarCompact = shouldCompact;
+      navbar.classList.toggle('navbar--compact', shouldCompact);
+      setNavOffset();
+    };
 
     const updateNavbar = () => {
       const currentScrollY = Math.max(window.scrollY, 0);
-      const isCompact = currentScrollY > 24;
+      const shouldCompact = isNavbarCompact
+        ? currentScrollY > NAVBAR_EXPAND_THRESHOLD
+        : currentScrollY > NAVBAR_COMPACT_THRESHOLD;
 
-      navbar.classList.toggle('navbar--compact', isCompact);
-      setNavOffset();
+      setNavbarCompact(shouldCompact);
       ticking = false;
     };
 
     updateNavbar();
+    setNavOffset();
     window.addEventListener('scroll', () => {
       if (!ticking) {
         window.requestAnimationFrame(updateNavbar);
@@ -184,9 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollToSectionTop = (target, behavior = 'smooth') => {
     const targetTop = target.getBoundingClientRect().top + window.scrollY;
-    const willUseCompactNav = navbar && targetTop > 24;
-    navbar?.classList.toggle('navbar--compact', Boolean(willUseCompactNav));
-    setNavOffset();
+    const willUseCompactNav = navbar && targetTop > NAVBAR_COMPACT_THRESHOLD;
+    setNavbarCompact(Boolean(willUseCompactNav));
     const scrollOffset = navbar ? navbar.offsetHeight : 0;
     window.scrollTo({
       top: Math.max(targetTop - scrollOffset, 0),
