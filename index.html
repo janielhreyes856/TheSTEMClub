@@ -25,19 +25,19 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="support.html">Support Us</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="support.html#payment" class="btn-donate">DONATE</a></li>
+      <li><a href="checkout.html" class="btn-donate">DONATE</a></li>
+      <li><a href="support.html#shop" class="nav-cart" data-cart-nav aria-label="Shopping cart"><span aria-hidden="true">🛒</span><span class="nav-cart-count" data-cart-count>0</span></a></li>
     </ul>
   </nav>
 
   <!-- HERO — split red left / blue right -->
   <section class="home-hero">
     <div class="home-hero-left">
-      <p class="change-world-tag">🔗 STEM access starts here.</p>
       <h1>Building bright futures through STEM.</h1>
       <p class="hero-subtitle">The STEM Club creates welcoming workshops, mentorship, and community projects that help students discover science, technology, engineering, and math with confidence.</p>
       <div class="hero-btns">
         <a href="#workshops" class="btn-pill-yellow">Explore Workshops</a>
-        <a href="support.html#payment" class="btn-pill-green">Donate</a>
+        <a href="checkout.html" class="btn-pill-green">Donate</a>
       </div>
     </div>
     <div class="home-hero-right">
@@ -84,7 +84,7 @@
   <section class="about-section" id="about">
     <div class="about-inner">
       <div class="about-left">
-        <p class="about-eyebrow section-kicker">About Us</p>
+        <p class="about-eyebrow section-kicker section-kicker-blue">About Us</p>
         <h2 class="about-title">A student-centered nonprofit for hands-on <span class="stem-colored">STEM</span> discovery</h2>
         <div class="about-photos">
           <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=900&q=80" alt="STEM 1" class="about-photo border-red"/>
@@ -94,15 +94,15 @@
         </div>
       </div>
       <div class="about-right">
-        <p class="about-bold-quote">We believe students learn best when they can touch, test, build, ask questions, and see how STEM connects to their everyday lives.</p>
+        <p class="about-who-title">Who We Are</p>
         <p class="about-body">Our programs introduce learners to mechanical design, electronics, coding, robotics, and community problem-solving in a way that feels welcoming instead of intimidating.</p>
         <p class="about-body">With volunteers, families, sponsors, and educators, we provide tools and experiences that help young people build confidence and imagine future careers.</p>
         <div class="about-checks">
-          <span>✔️ Hands-on learning</span>
+          <span><span class="feature-icon" aria-hidden="true">⚙️</span> Hands-on learning</span>
           <span class="sep">|</span>
-          <span>✔️ Community impact</span>
+          <span><span class="feature-icon" aria-hidden="true">❤️</span> Community impact</span>
         </div>
-        <a href="support.html#payment" class="btn-donate-red">DONATE</a>
+        <a href="checkout.html" class="btn-donate-red">DONATE</a>
       </div>
     </div>
   </section>
@@ -152,7 +152,18 @@
         <div class="ws-body">
           <h3>Our Campaign</h3>
           <p>Help us bring robotics kits, tools, and mentor-led build sessions to more students through our ongoing STEM access campaign.</p>
-          <a href="#contact" class="ws-btn">Contact Us</a>
+          <div class="campaign-progress" aria-label="Campaign progress toward $5,000 goal">
+            <div class="campaign-progress-label"><span>$2,750 donated</span><span>$5,000 goal</span></div>
+            <div class="campaign-bar"><span style="width: 55%"></span></div>
+          </div>
+          <div class="campaign-amounts" data-donation-amounts>
+            <button type="button" data-amount="25">$25</button>
+            <button type="button" data-amount="50">$50</button>
+            <button type="button" data-amount="75">$75</button>
+            <button type="button" data-amount="100">$100</button>
+          </div>
+          <input class="campaign-custom" type="number" min="1" step="1" placeholder="Custom..." data-donation-custom />
+          <a href="https://www.paypal.com/donate" target="_blank" rel="noopener" class="ws-btn paypal-donate-btn" data-paypal-donate>Donate</a>
         </div>
       </article>
     </div>
@@ -161,12 +172,7 @@
   <!-- SUPPORT OUR WORK BANNER -->
   <section class="support-work-banner">
     <div class="heart-icon">
-      <!-- layered heart SVG matching design -->
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 35 Q15 15 35 15 Q50 15 50 30 Q50 15 65 15 Q85 15 85 35 Q85 55 50 80 Q15 55 15 35Z" fill="#29ABE2" transform="rotate(-10 50 50)"/>
-        <path d="M18 38 Q18 18 38 18 Q50 18 50 32 Q50 18 62 18 Q82 18 82 38 Q82 56 50 78 Q18 56 18 38Z" fill="#E8312A" transform="rotate(5 50 50)"/>
-        <path d="M20 40 Q20 20 40 20 Q50 20 50 33 Q50 20 60 20 Q80 20 80 40 Q80 57 50 76 Q20 57 20 40Z" fill="#F5C518" transform="translate(0 8)"/>
-      </svg>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23E8312A' d='M50 86S12 62 12 33c0-13 10-23 23-23 8 0 13 4 15 9 2-5 7-9 15-9 13 0 23 10 23 23 0 29-38 53-38 53z'/%3E%3C/svg%3E" alt="Red heart"/>
     </div>
     <div class="sw-text">
       <h2>Support Our Work</h2>
@@ -174,7 +180,7 @@
     </div>
     <div class="sw-btns">
       <a href="support.html#shop" class="btn-green-pill">Our Shop -></a>
-      <a href="support.html#payment" class="btn-red-pill">Support Our Campaign</a>
+      <a href="checkout.html" class="btn-red-pill">Support Our Campaign</a>
     </div>
   </section>
 
@@ -185,7 +191,8 @@
       <h2>Contact</h2>
       <div class="dash"></div>
     </div>
-    <form class="contact-form-card">
+    <div class="contact-layout">
+      <form class="contact-form-card">
       <div class="form-row">
         <div class="form-group">
           <label>First Name *</label>
@@ -204,8 +211,12 @@
         <label>Message</label>
         <textarea placeholder="Tell us about your interest..."></textarea>
       </div>
-      <button type="submit" class="btn-submit">Submit</button>
-    </form>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+      <div class="contact-map" aria-label="Map of South Jersey">
+        <iframe title="South Jersey map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-75.60%2C38.85%2C-73.90%2C40.35&amp;layer=mapnik&amp;marker=39.70%2C-74.80"></iframe>
+      </div>
+    </div>
   </section>
 
 <!-- FOOTER -->
@@ -252,6 +263,16 @@
   </p>
 
 </footer>
+
+<aside class="cart-drawer" data-cart-drawer aria-live="polite">
+  <div class="cart-drawer-panel">
+    <button type="button" class="cart-close" data-cart-close aria-label="Close cart">×</button>
+    <h3>Your Cart</h3>
+    <div class="cart-items" data-cart-items><p class="empty-cart">No items yet.</p></div>
+    <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </div>
+</aside>
 
 <script src="main.js"></script>
 </body>

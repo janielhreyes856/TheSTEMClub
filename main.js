@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.addEventListener('transitionend', setNavOffset);
   }
 
-  const navLinks = [...document.querySelectorAll('.nav-links a:not(.btn-donate)')];
+  const navLinks = [...document.querySelectorAll('.nav-links a:not(.btn-donate):not(.nav-cart)')];
   const normalizePath = path => path.replace(/\/$/, '/index.html');
   const samePagePath = url => normalizePath(url.pathname) === normalizePath(window.location.pathname);
   const setActiveNav = () => {
@@ -90,35 +90,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.querySelectorAll('.donation-amounts span').forEach(span => {
-    span.addEventListener('click', () => {
-      document.querySelectorAll('.donation-amounts span').forEach(s => s.style.background = '');
-      span.style.background = '#F5C518';
-      const input = document.querySelector('.custom-amount');
-      if (input) input.value = span.textContent.replace('$', '');
+  const getDonationAmount = () => document.querySelector('[data-donation-custom]')?.value || '';
+  const syncDonationAmount = amount => {
+    document.querySelectorAll('[data-donation-custom], [data-payment-amount]').forEach(input => { input.value = amount; });
+    document.querySelectorAll('[data-paypal-amount]').forEach(input => { input.value = amount; });
+    document.querySelectorAll('[data-paypal-donate]').forEach(link => {
+      link.href = amount ? `https://www.paypal.com/donate?amount=${encodeURIComponent(amount)}` : 'https://www.paypal.com/donate';
+    });
+  };
+
+  document.querySelectorAll('[data-donation-amounts] button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('[data-donation-amounts] button').forEach(btn => btn.classList.remove('is-selected'));
+      button.classList.add('is-selected');
+      syncDonationAmount(button.dataset.amount || button.textContent.replace('$', ''));
     });
   });
 
-  const cart = [];
+  document.querySelectorAll('[data-donation-custom], [data-payment-amount]').forEach(input => {
+    input.addEventListener('input', () => syncDonationAmount(input.value));
+  });
+
+  const cartStorageKey = 'stemClubCart';
+  const readCart = () => {
+    try { return JSON.parse(localStorage.getItem(cartStorageKey)) || []; }
+    catch { return []; }
+  };
+  let cart = readCart();
+  const saveCart = () => localStorage.setItem(cartStorageKey, JSON.stringify(cart));
   const cartItems = document.querySelector('[data-cart-items]');
   const cartTotal = document.querySelector('[data-cart-total]');
-  const cartCount = document.querySelector('[data-cart-count]');
-  const floatingCart = document.querySelector('[data-floating-cart]');
-  const cartToggle = document.querySelector('[data-cart-toggle]');
-  const paymentAmount = document.querySelector('[data-payment-amount]');
+  const cartCounts = document.querySelectorAll('[data-cart-count]');
+  const cartDrawer = document.querySelector('[data-cart-drawer]');
+  const cartNavLinks = document.querySelectorAll('[data-cart-nav]');
+  const cartClose = document.querySelector('[data-cart-close]');
+
+  function cartTotalAmount() {
+    return cart.reduce((sum, item) => sum + item.price, 0);
+  }
 
   function renderCart() {
-    if (!cartItems || !cartTotal) return;
+    const totals = cartTotalAmount();
+    cartCounts.forEach(count => { count.textContent = String(cart.length); });
+    if (cartTotal) cartTotal.textContent = `$${totals}`;
+    if (cart.length && document.querySelector('[data-payment-amount]') && !getDonationAmount()) syncDonationAmount(String(totals));
+
+    if (!cartItems) return;
     if (!cart.length) {
       cartItems.innerHTML = '<p class="empty-cart">No items yet.</p>';
-      cartTotal.textContent = '$0';
-      if (cartCount) cartCount.textContent = '0';
-      if (floatingCart) floatingCart.classList.remove('is-visible', 'is-open');
-      if (paymentAmount) paymentAmount.value = '';
       return;
     }
 
-    const totals = cart.reduce((sum, item) => sum + item.price, 0);
     cartItems.innerHTML = cart.map(item => `
       <div class="cart-line">
         <img src="${item.image}" alt="${item.name}">
@@ -126,15 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <strong>$${item.price}</strong>
       </div>
     `).join('');
-    cartTotal.textContent = `$${totals}`;
-    if (cartCount) cartCount.textContent = String(cart.length);
-    if (floatingCart) floatingCart.classList.add('is-visible', 'is-open');
-    if (paymentAmount) paymentAmount.value = totals;
   }
 
-  cartToggle?.addEventListener('click', () => {
-    floatingCart?.classList.toggle('is-open');
+  cartNavLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      if (!cart.length) return;
+      if (cartDrawer) {
+        event.preventDefault();
+        cartDrawer.classList.add('is-open');
+      }
+    });
   });
+
+  cartClose?.addEventListener('click', () => cartDrawer?.classList.remove('is-open'));
 
   document.querySelectorAll('.shop-card .shop-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -146,11 +172,15 @@ document.addEventListener('DOMContentLoaded', () => {
         price: Number(card.dataset.price || 0),
         image
       });
+      saveCart();
       renderCart();
+      cartDrawer?.classList.add('is-open');
       button.textContent = 'Added ✓';
       setTimeout(() => { button.textContent = 'Add'; }, 1200);
     });
   });
+
+  renderCart();
 
   const scrollToSectionTop = (target, behavior = 'smooth') => {
     const targetTop = target.getBoundingClientRect().top + window.scrollY;
