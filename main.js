@@ -186,14 +186,27 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    cartItems.innerHTML = cart.map(item => `
+    cartItems.innerHTML = cart.map((item, index) => `
       <div class="cart-line">
         <img src="${item.image}" alt="${item.name}">
         <span>${item.name}</span>
         <strong>$${item.price}</strong>
+        <button type="button" class="cart-remove" data-cart-remove="${index}" aria-label="Remove ${item.name} from cart">×</button>
       </div>
     `).join('');
   }
+
+  cartItems?.addEventListener('click', event => {
+    const removeButton = event.target.closest('[data-cart-remove]');
+    if (!removeButton) return;
+
+    const itemIndex = Number(removeButton.dataset.cartRemove);
+    if (!Number.isInteger(itemIndex) || !cart[itemIndex]) return;
+
+    cart.splice(itemIndex, 1);
+    saveCart();
+    renderCart();
+  });
 
   cartNavLinks.forEach(link => {
     link.addEventListener('click', event => {
