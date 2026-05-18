@@ -24,11 +24,11 @@
 .sc-yellow { border-bottom: 9px solid var(--yellow); }
 .sc-red { border-bottom: 9px solid var(--green); }
 .sc-green { border-bottom: 9px solid var(--blue); }
-.sc-blue { border-bottom: 9px solid var(--blue); }
+.sc-blue { border-bottom: 9px solid var(--red); }
 .sc-btn { align-self: flex-start; margin: 18px 22px 22px; border: none; border-radius: 999px; padding: 10px 22px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 0.92rem; cursor: pointer; color: #fff; }
-.sc-btn-red { background: var(--red); } .sc-btn-green { background: var(--green); } .sc-btn-blue { background: var(--blue); } .sc-btn-yellow { background: var(--yellow); color: #222; }
+.sc-btn-red { background: var(--red); } .sc-btn-green { background: var(--green); } .sc-btn-blue { background: var(--blue); } .sc-btn-yellow, .sc-btn-wishlist { background: var(--yellow); color: #222; }
 
-.our-shop-section { background: #102f4a; padding: 80px 40px; color: #fff; }
+.our-shop-section { background: var(--support-work-gradient); padding: 80px 40px; color: #fff; }
 .shop-title-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 12px; }
 .shop-title-row h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.2rem, 4vw, 3.5rem); }
 .shop-dash { font-size: 2rem; font-weight: 900; color: var(--yellow); }
@@ -74,12 +74,12 @@
 .btn-submit-orange { background: var(--blue); color: #fff; border: none; border-radius: 999px; padding: 13px 38px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 1rem; cursor: pointer; }
 
 @media (max-width: 1100px) { .support-cards-grid, .shop-cards-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 700px) { .support-hero, .contributions-section, .our-shop-section, .volunteer-section { padding-left: 22px; padding-right: 22px; } .support-cards-grid, .shop-cards-grid, .vf-row { grid-template-columns: 1fr; }
+@media (max-width: 700px) { .support-hero, .contributions-section, .our-shop-section, .volunteer-section { padding-left: 22px; padding-right: 22px; } .support-cards-grid, .shop-cards-grid, .vf-row { grid-template-columns: 1fr; } }
 /* Requested support/shop/cart refinements */
-.sc-btn-wishlist { background: var(--yellow); color: #fff; }
+.sc-btn-wishlist { background: var(--yellow); color: #222; }
 .sc-blue { border-bottom-color: var(--red); }
 .our-shop-section {
-  background: linear-gradient(135deg, var(--dark-blue), var(--blue));
+  background: var(--support-work-gradient);
 }
 .shop-dash { color: var(--green); }
 .shop-intro { color: rgba(255,255,255,0.9); }
@@ -164,10 +164,10 @@
 
 /* Follow-up support page polish */
 .contributions-section .section-kicker { color: var(--blue); }
-.sc-btn-wishlist { background: var(--yellow); color: #fff; }
+.sc-btn-wishlist { background: var(--yellow); color: #222; }
 .sc-blue { border-bottom-color: var(--red); }
 .our-shop-section {
-  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--blue) 100%);
+  background: var(--support-work-gradient);
 }
 .checkout-campaign-card {
   position: relative;
