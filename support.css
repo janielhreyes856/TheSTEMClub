@@ -161,3 +161,66 @@
 .checkout-contact-form label { display: flex; flex-direction: column; gap: 8px; font-weight: 900; color: var(--ink); }
 .checkout-contact-form textarea { min-height: 120px; resize: vertical; }
 @media (max-width: 900px) { .checkout-page { grid-template-columns: 1fr; padding-left: 22px; padding-right: 22px; } }
+
+/* Follow-up support page polish */
+.contributions-section .section-kicker { color: var(--blue); }
+.sc-btn-wishlist { background: var(--yellow); color: #fff; }
+.sc-blue { border-bottom-color: var(--red); }
+.our-shop-section {
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--blue) 100%);
+}
+.checkout-campaign-card {
+  position: relative;
+  overflow: hidden;
+}
+.checkout-campaign-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 10px;
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--yellow));
+}
+.checkout-campaign-heading {
+  max-width: 660px;
+  margin-bottom: 28px;
+}
+.checkout-campaign-heading .section-kicker {
+  margin-bottom: 18px;
+}
+.checkout-campaign-heading h1 {
+  max-width: 640px;
+  text-wrap: balance;
+}
+.checkout-campaign-heading h1 span {
+  color: var(--blue);
+  display: inline-block;
+}
+.checkout-campaign-heading p {
+  max-width: 590px;
+  font-size: 1.08rem;
+}
+.checkout-campaign-card .campaign-progress {
+  background: var(--sky-soft);
+  border: 1px solid rgba(41,171,226,0.16);
+  border-radius: 22px;
+  padding: 18px;
+}
+.volunteer-layout {
+  grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1.32fr);
+  align-items: start;
+}
+.volunteer-image {
+  justify-self: end;
+  width: min(100%, 360px);
+  height: 380px;
+  min-height: 0;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) {
+  .volunteer-image {
+    justify-self: stretch;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 26px;
+  }
+}
