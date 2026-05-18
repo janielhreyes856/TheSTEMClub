@@ -21,7 +21,8 @@
       <li><a href="../../blog.html" class="active">Blog</a></li>
       <li><a href="../../support.html">Support Us</a></li>
       <li><a href="../../index.html#contact">Contact</a></li>
-      <li><a href="../../support.html#donate" class="btn-donate">DONATE</a></li>
+      <li><a href="../../checkout.html" class="btn-donate">DONATE</a></li>
+      <li><a href="../../support.html#shop" class="nav-cart" data-cart-nav aria-label="Shopping cart"><span aria-hidden="true">🛒</span><span class="nav-cart-count" data-cart-count>0</span></a></li>
     </ul>
   </nav>
 
@@ -76,6 +77,16 @@
 
   <script src="../../blog-posts.js"></script>
   <script src="../../blog-post.js"></script>
+  <aside class="cart-drawer" data-cart-drawer aria-live="polite">
+    <div class="cart-drawer-panel">
+      <button type="button" class="cart-close" data-cart-close aria-label="Close cart">×</button>
+      <h3>Your Cart</h3>
+      <div class="cart-items" data-cart-items><p class="empty-cart">No items yet.</p></div>
+      <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
+      <a href="../../checkout.html" class="checkout-btn">Checkout</a>
+    </div>
+  </aside>
+
   <script src="../../main.js"></script>
 </body>
 </html>

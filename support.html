@@ -19,7 +19,8 @@
       <li><a href="blog.html">Blog</a></li>
       <li><a href="support.html" class="active">Support Us</a></li>
       <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="support.html#payment" class="btn-donate">DONATE</a></li>
+      <li><a href="checkout.html" class="btn-donate">DONATE</a></li>
+      <li><a href="support.html#shop" class="nav-cart" data-cart-nav aria-label="Shopping cart"><span aria-hidden="true">🛒</span><span class="nav-cart-count" data-cart-count>0</span></a></li>
     </ul>
   </nav>
 
@@ -29,7 +30,7 @@
       <h1>Fuel student builders, coders, and problem solvers.</h1>
       <p>Choose the giving path that fits you best: donate to the robotics campaign, purchase club merch, share supplies, volunteer, or become a community partner.</p>
       <div class="hero-btns">
-        <a href="#payment" class="btn-pill-red">Donate</a>
+        <a href="checkout.html" class="btn-pill-red">Donate</a>
         <a href="#shop" class="btn-pill-outline">Shop & Cart</a>
       </div>
     </div>
@@ -45,28 +46,28 @@
         <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=900&q=80" alt="Packages of donated supplies"/>
         <h3>Amazon Wishlist</h3>
         <p>Help restock classroom supplies, electronics, 3D printing materials, notebooks, and tools for upcoming workshops.</p>
-        <a href="#" class="sc-btn sc-btn-red">Wishlist</a>
+        <a href="#" class="sc-btn sc-btn-wishlist">Wishlist</a>
       </article>
 
-      <article class="support-card sc-red">
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics equipment for a student campaign"/>
-        <h3>Our Campaign</h3>
-        <p>Support our robotics campaign so more students can build, code, test, and showcase real working robots.</p>
-        <a href="#payment" class="sc-btn sc-btn-green">Campaign</a>
-      </article>
-
-      <article class="support-card sc-green">
+      <article class="support-card sc-green shop-menu-card">
         <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=900&q=80" alt="STEM Club apparel and merchandise"/>
         <h3>Our Shop</h3>
         <p>Buy community merch that spreads the brand and helps fund workshops, outreach events, and student projects.</p>
         <a href="#shop" class="sc-btn sc-btn-blue">Add</a>
       </article>
 
+      <article class="support-card sc-red campaign-menu-card">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80" alt="Robotics equipment for a student campaign"/>
+        <h3>Our Campaign</h3>
+        <p>Support our robotics campaign so more students can build, code, test, and showcase real working robots.</p>
+        <a href="checkout.html" class="sc-btn sc-btn-green">Campaign</a>
+      </article>
+
       <article class="support-card sc-blue">
         <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&q=80" alt="Community partners collaborating"/>
         <h3>Partnerships/Sponsors</h3>
         <p>Partner with The STEM Club through sponsorships, mentors, space, supplies, career talks, or community events.</p>
-        <a href="#volunteer" class="sc-btn sc-btn-yellow">Form</a>
+        <a href="#volunteer" class="sc-btn sc-btn-red">Form</a>
       </article>
     </div>
   </section>
@@ -83,43 +84,22 @@
       <div class="shop-cards-grid">
         <article class="shop-card" data-name="STEM Club Tee" data-price="24">
           <div class="shop-img"><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=900&q=80" alt="STEM Club T-shirt"/></div>
-          <div class="shop-body"><h4>STEM Club Tee</h4><p>Soft everyday shirt for students, volunteers, and supporters.</p><strong>$24</strong><button class="shop-btn">Add</button></div>
+          <div class="shop-body"><div class="shop-item-heading"><h4>STEM Club Tee</h4><strong>$24</strong></div><p>Soft everyday shirt for students, volunteers, and supporters.</p><button class="shop-btn">Add</button></div>
         </article>
         <article class="shop-card" data-name="Builder Hoodie" data-price="42">
           <div class="shop-img"><img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=900&q=80" alt="STEM Club hoodie"/></div>
-          <div class="shop-body"><h4>Builder Hoodie</h4><p>Cozy hoodie for workshop days, events, and team meetups.</p><strong>$42</strong><button class="shop-btn">Add</button></div>
+          <div class="shop-body"><div class="shop-item-heading"><h4>Builder Hoodie</h4><strong>$42</strong></div><p>Cozy hoodie for workshop days, events, and team meetups.</p><button class="shop-btn">Add</button></div>
         </article>
         <article class="shop-card" data-name="Lab Notebook Pack" data-price="12">
           <div class="shop-img"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80" alt="STEM notebook pack"/></div>
-          <div class="shop-body"><h4>Notebook Pack</h4><p>Project notebooks for sketches, design notes, and test results.</p><strong>$12</strong><button class="shop-btn">Add</button></div>
+          <div class="shop-body"><div class="shop-item-heading"><h4>Notebook Pack</h4><strong>$12</strong></div><p>Project notebooks for sketches, design notes, and test results.</p><button class="shop-btn">Add</button></div>
         </article>
         <article class="shop-card" data-name="Sponsor a Kit" data-price="55">
           <div class="shop-img"><img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=900&q=80" alt="Electronics learning kit"/></div>
-          <div class="shop-body"><h4>Sponsor a Kit</h4><p>Fund a hands-on kit for robotics, circuitry, or coding workshops.</p><strong>$55</strong><button class="shop-btn">Add</button></div>
+          <div class="shop-body"><div class="shop-item-heading"><h4>Sponsor a Kit</h4><strong>$55</strong></div><p>Fund a hands-on kit for robotics, circuitry, or coding workshops.</p><button class="shop-btn">Add</button></div>
         </article>
       </div>
 
-    </div>
-  </section>
-
-  <section class="payment-page" id="payment">
-    <div class="payment-card">
-      <p class="section-kicker">Secure checkout</p>
-      <h2>Checkout with PayPal</h2>
-      <p>Review your cart amount, choose the purpose, and continue to PayPal to complete your support securely.</p>
-      <form class="payment-form" action="https://www.paypal.com/donate" method="post">
-        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com"/>
-        <label>Donation / cart amount</label>
-        <input type="number" name="amount" min="1" step="1" placeholder="25" data-payment-amount/>
-        <label>Purpose</label>
-        <select name="item_name">
-          <option>Shop checkout</option>
-          <option>Workshop supplies</option>
-          <option>Robotics campaign</option>
-          <option>General support</option>
-        </select>
-        <button type="submit" class="paypal-btn">Continue to PayPal</button>
-      </form>
     </div>
   </section>
 
@@ -132,7 +112,9 @@
     <h2 class="volunteer-heading">Lend time, skills, or partnership support.</h2>
     <p class="volunteer-body">Tell us how you would like to help. We welcome mentors, event helpers, sponsors, guest speakers, and community partners.</p>
 
-    <form class="volunteer-form">
+    <div class="volunteer-layout">
+      <div class="volunteer-image"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1000&q=80" alt="Volunteers supporting students"/></div>
+      <form class="volunteer-form">
       <div class="vf-row">
         <input type="text" placeholder="Name" required/>
         <input type="email" placeholder="Email" required/>
@@ -142,8 +124,9 @@
         <input type="tel" placeholder="Phone number"/>
       </div>
       <textarea placeholder="Message"></textarea>
-      <div class="vf-submit-row"><button type="submit" class="btn-submit-orange">Submit Now</button></div>
-    </form>
+        <div class="vf-submit-row"><button type="submit" class="btn-submit-orange">Submit Now</button></div>
+      </form>
+    </div>
   </section>
 
   <footer class="site-footer">
@@ -157,16 +140,13 @@
   </footer>
 
 
-  <aside class="floating-cart" data-floating-cart aria-live="polite">
-    <button class="floating-cart-toggle" type="button" data-cart-toggle aria-label="Open cart">
-      <span class="cart-icon">🛒</span>
-      <span class="cart-count" data-cart-count>0</span>
-    </button>
-    <div class="floating-cart-panel">
-      <h3>Cart</h3>
+  <aside class="cart-drawer" data-cart-drawer aria-live="polite">
+    <div class="cart-drawer-panel">
+      <button type="button" class="cart-close" data-cart-close aria-label="Close cart">×</button>
+      <h3>Your Cart</h3>
       <div class="cart-items" data-cart-items><p class="empty-cart">No items yet.</p></div>
       <div class="cart-total"><span>Total</span><strong data-cart-total>$0</strong></div>
-      <a href="#payment" class="checkout-btn">Checkout</a>
+      <a href="checkout.html" class="checkout-btn">Checkout</a>
     </div>
   </aside>
 
